@@ -1,0 +1,328 @@
+.bazz-widget ::-webkit-input-placeholder
+{
+	color: #fff !important;
+	font-style: normal !important;
+}
+.bazz-widget :-moz-placeholder
+{
+	color: #fff !important;
+	font-style: normal !important;
+	opacity: 1;
+}
+.bazz-widget ::-moz-placeholder
+{
+	color: #fff !important;
+	font-style: normal !important;
+	opacity: 1;
+}
+.bazz-widget :-ms-input-placeholder
+{
+	color: #fff !important;
+	font-style: normal !important;
+}
+.bazz-widget :placeholder-shown
+{
+	color: #fff !important;
+	font-style: normal !important;
+}
+.bazz-widget
+{
+	background-color: #00aff2;
+	border-radius: 35px;
+	box-sizing: border-box;
+	font-family: helvetica, sans-serif !important;
+	height: 65px;
+	position: fixed !important;
+	text-align: right;
+	transition: width .5s;
+	width: 65px;
+	z-index: 9997;
+}
+.bazz-widget *
+{
+	box-sizing: border-box;
+}
+.bazz-widget.opened
+{
+	width: 500px;
+}
+.bazz-widget-close
+{
+	background: url('../img/misc/bazz-close-button.png.pagespeed.ce.0DFxCWIWDj.png') no-repeat center center;
+	background-color: #00aff2;
+	background-size: 22px;
+	border: 3px solid #fff;
+	border-radius: 50%;
+	cursor: pointer;
+	display: none;
+	font-size: 0;
+	height: 30px;
+	left: -10px;
+	position: absolute;
+	top: -10px;
+	width: 30px;
+	z-index: 9998;
+}
+.bazz-widget.opened .bazz-widget-close
+{
+	display: block;
+}
+.bazz-widget-form
+{
+	display: none;
+	height: 65px;
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+	transition: margin .3s ease-in-out;
+	width: 100%;
+}
+.bazz-widget.opened .bazz-widget-form
+{
+}
+.bazz-widget-form label
+{
+	color: #fff;
+	display: inline-block;
+	font-size: 16px;
+	font-weight: normal;
+	line-height: 1.2;
+	text-align: left;
+	vertical-align: middle;
+	width: 32%;
+}
+.bazz-widget-form label .bazz_time
+{
+	position: static;
+}
+.bazz-widget-form label.countdown
+{
+	margin-left: 2%;
+	width: 25%;
+}
+.bazz-widget-form input
+{
+	border-radius: 20px !important;
+	color: #fff !important;
+	display: inline-block !important;
+	font-family: helvetica, sans-serif !important;
+	font-size: 16px;
+	font-weight: 400;
+	height: 30px;
+	letter-spacing: 0;
+	line-height: 1;
+	padding: 0 !important;
+	text-align: left;
+	text-transform: none;
+	vertical-align: middle;
+	width: 32% !important;
+}
+.bazz-widget-form input[type="tel"]
+{
+	background: transparent !important;
+	border: 1px solid #fff;
+	padding-left: 6px !important;
+	padding-right: 6px !important;
+}
+.bazz-widget-form input[type="tel"]:focus,.bazz-widget-form input[type="text"]:focus
+{
+	border-color: #fff;
+}
+.bazz-widget-form-submit
+{
+	border-radius: 20px;
+	border-style: solid;
+	border-width: 1px;
+	bottom: auto;
+	color: #fff !important;
+	display: inline-block;
+	font-family: helvetica, sans-serif !important;
+	font-size: 16px;
+	height: 30px;
+	left: auto;
+	line-height: 28px;
+	margin-left: 2%;
+	position: static;
+	right: auto;
+	text-align: center;
+	text-decoration: none !important;
+	top: auto;
+	vertical-align: middle;
+	width: 25%;
+}
+.bazz-widget-form input[hidden]
+{
+	display: none!important;
+}
+.bazz-widget .bazz-widget-button
+{
+	border: none;
+	border-radius: 35px;
+	cursor: pointer;
+	height: 65px;
+	padding: 0;
+	position: relative;
+	text-align: center;
+	width: 65px;
+	z-index: 2;
+}
+.bazz-widget i
+{
+	backface-visibility: hidden;
+	display: block;
+	font-family: helvetica,sans-serif!important;
+	font-style: normal;
+	height: 100%;
+	left: 0;
+	moz-backface-visibility: hidden;
+	moz-transform-style: preserve-3d;
+	moz-transition: -moz-transform .5s;
+	ms-backface-visibility: hidden;
+	ms-transform-style: preserve-3d;
+	ms-transition: -moz-transform .5s;
+	o-backface-visibility: hidden;
+	o-transform-style: preserve-3d;
+	o-transition: -o-transform .5s;
+	position: absolute;
+	top: 0;
+	transform-style: preserve-3d;
+	transition: transform .5s;
+	webkit-backface-visibility: hidden;
+	webkit-transform-style: preserve-3d;
+	webkit-transition: -webkit-transform .5s;
+	width: 100%;
+}
+.bazz-widget.opened .bazz-widget-button,.bazz-widget.opened .bazz-widget-inner-circle,.bazz-widget.opened .bazz-widget-inner-border
+{
+	display: none;
+}
+.bazz-widget i:first-child
+{
+	background: url('../img/trubka.png') no-repeat center center;
+}
+.bazz-widget i:last-child
+{
+	align-items: center;
+	color: #fff;
+	display: flex;
+	display: -ms-flexbox;
+	display: -webkit-box;
+	font-size: 14px;
+	font-weight: bold;
+	justify-content: center;
+	line-height: 1.2;
+	moz-transform: rotateY(180deg);
+	ms-flex-align: center;
+	ms-flex-pack: center;
+	ms-transform: rotateY(180deg);
+	o-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+	webkit-box-align: center;
+	webkit-box-pack: center;
+	webkit-transform: rotateY(180deg);
+	word-wrap: break-word;
+}
+.bazz-widget-inner-circle
+{
+	border-radius: 100px;
+	height: 65px;
+	opacity: .3;
+	position: absolute;
+	right: 0;
+	top: 0;
+	transition: all 1s ease-in-out;
+	width: 65px;
+	z-index: 1;
+}
+.bazz-widget-inner-border
+{
+	border-radius: 200px;
+	border-style: solid;
+	border-width: 1px;
+	height: 65px;
+	opacity: 1;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 65px;
+	z-index: 1;
+}
+.bazz-widget-your-name
+{
+	border-bottom: 1px dashed #fff;
+	bottom: auto;
+	color: #fff!important;
+	height: auto;
+	left: auto;
+	line-height: 1.2;
+	position: static;
+	right: auto;
+	text-decoration: none!important;
+	top: auto;
+	width: auto;
+}
+.bazz-widget-form-top,.bazz-widget-form-bottom
+{
+	height: 65px;
+	padding-top: 12px;
+	position: relative;
+	transition: margin .3s ease-in-out;
+	width: 100%;
+}
+.bazz-widget-form-top.overflow
+{
+	margin-top: -65px;
+}
+.bazz-widget-form-bottom
+{
+}
+.bazz-widget-form-bottom label
+{
+	vertical-align: middle;
+	width: 45%;
+}
+.bazz-widget-form-bottom input
+{
+	background: transparent!important;
+	border: 1px solid #fff;
+	padding: 0 6px!important;
+	vertical-align: middle;
+	width: 40%;
+}
+.bazz-widget-name-close
+{
+	background: url('../img/misc/ok.png.pagespeed.ce.TuXbi90o0j.png') no-repeat center center #00aff2;
+	background-size: 24px;
+	border-radius: 50%;
+	border-style: solid;
+	border-width: 1px;
+	bottom: auto;
+	display: inline-block;
+	height: 34px;
+	left: auto;
+	margin-left: 10px;
+	position: static;
+	right: auto;
+	top: auto;
+	vertical-align: middle;
+	width: 34px;
+}
+.bazz-widget-form-info
+{
+	bottom: 0;
+	color: #666!important;
+	font-size: 9px;
+	left: 0;
+	line-height: 1;
+	padding-bottom: 2px;
+	position: absolute;
+	text-align: center;
+	width: 100%;
+}
+@media only screen and (max-width:575px)
+{
+	.bazz-widget
+	{
+		display: none;
+	}
+}

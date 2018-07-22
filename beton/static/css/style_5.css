@@ -1,0 +1,30 @@
+﻿img#wpstats{display:none}
+
+#section-
+{
+	background: url() no-repeat scroll top left;
+	background-size: auto;
+}
+#section- .overlay
+{
+	/*background: url(http://www.profibeton.com.ua/wp-content/themes/accesspress-parallax/images/overlay0.png); */
+}
+
+.site-title a,
+.site-description{color:#0066bf}
+
+.bazz-widget
+{
+	bottom: 50px;
+	left: 75px;
+	right: auto!important;
+}
+.bazz-widget,.bazz-widget-close,.bazz-widget-form-submit,.bazz-widget-button,.bazz-widget-name-close,.bazz-widget-inner-circle
+{
+	background-color: #408080;
+}
+.bazz-widget-inner-border,.bazz-widget-form-submit,.bazz-widget-name-close
+{
+	border-color: #408080;
+}
+

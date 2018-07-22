@@ -1,0 +1,38 @@
+{% load static %} 
+
+
+<div id=respond class=comment-respond>
+	<h3 id=reply-title class=comment-reply-title>Добавить комментарий 
+		<small><a rel=nofollow id=cancel-comment-reply-link href="/#respond" style="display:none;">Отменить ответ</a></small>
+	</h3>	
+	<form action="#" method=post id=commentform class=comment-form novalidate>
+		<p class=comment-notes>
+			<span id=email-notes>Ваш e-mail не будет опубликован.</span>
+		</p>
+		<p class=comment-form-comment>
+			<label for=comment>Комментарий</label>
+			<textarea id=comment name=comment cols=45 rows=8 maxlength=65525 required=required></textarea>
+		</p>
+		<p class=comment-form-author>
+			<label for=author>Имя</label> 
+			<input id=author name=author type=text value="" size=30 maxlength=245 />
+		</p>
+		<p class=comment-form-email>
+			<label for=email>E-mail</label> 
+			<input id=email name=email type=email value="" size=30 maxlength=100 aria-describedby=email-notes />
+		</p>
+		<p class=comment-form-url>
+			<label for=url>Сайт</label>
+			<input id=url name=url type=url value="" size=30 maxlength=200 />
+		</p>
+		<p class=comment-form-cookies-consent>
+			<input id=wp-comment-cookies-consent name=wp-comment-cookies-consent type=checkbox value=yes />
+			<label for=wp-comment-cookies-consent>Сохранить моё имя, email и адрес сайта в этом браузере для последующих моих комментариев.</label>
+		</p>
+		<p class=form-submit>
+			<input name=submit type=submit id=submit class=submit value="Отправить комментарий"/>
+			<input type=hidden name=comment_post_ID value=2 id=comment_post_ID />
+			<input type=hidden name=comment_parent id=comment_parent value=0 />
+		</p>	
+	</form>
+</div><!-- #respond -->

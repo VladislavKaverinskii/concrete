@@ -1,0 +1,139 @@
+﻿.cleara:after
+{
+	clear: both;
+	content: " ";
+	display: block;
+}
+nav.n1 .menus
+{
+	margin-top: 50px;
+	text-align: center;
+}
+nav.n1 .menus ul
+{
+	display: inline-block;
+	list-style-type: none;
+}
+nav.n1 .menus ul li.l1
+{
+	background-color: #fff;
+	border-color: #e3e3e3;
+	border-left: 3px solid;
+	border-radius: 50px;
+	border-right: 3px solid;
+	float: left;
+	height: 130px;
+	margin: 1px;
+	moz-transition: background .5s cubic-bezier(.68,-.55,.27,1.55) 0s;
+	ms-transition: background .5s cubic-bezier(.68,-.55,.27,1.55) 0s;
+	o-transition: background .5s cubic-bezier(.68,-.55,.27,1.55) 0s;
+	transition: background .5s cubic-bezier(.68,-.55,.27,1.55) 0s;
+	webkit-transition: background .5s cubic-bezier(.68,-.55,.27,1.55) 0s;
+	width: 110px;
+}
+nav.n1 .menus ul li.l1 a.a1
+{
+	display: table;
+	height: 100%;
+	position: relative;
+	text-align: center;
+	width: 100%;
+}
+nav.n1 .menus a.a1 i
+{
+	color: #a3a7ad;
+	display: table-cell;
+	font-size: 23px;
+	moz-transition: all .2s linear 0s;
+	ms-transition: all .2s linear 0s;
+	o-transition: all .2s linear 0s;
+	transition: all .2s linear 0s;
+	vertical-align: middle;
+	webkit-transition: all .2s linear 0s;
+}
+nav.n1 .menus a.a1 i:before
+{
+	border: 2px solid;
+	border-color: #a3a7ad;
+	border-radius: 500px;
+	display: inline-block;
+	height: 41px;
+	line-height: 37px;
+	moz-transition: color .2s linear 0s , font-size .2s linear 0s , border-color .2s linear .2s , height .2s linear 0s , width .2s linear 0s , line-height .2s linear 0s;
+	ms-transition: color .2s linear 0s , font-size .2s linear 0s , border-color .2s linear .2s , height .2s linear 0s , width .2s linear 0s , line-height .2s linear 0s;
+	o-transition: color .2s linear 0s , font-size .2s linear 0s , border-color .2s linear .2s , height .2s linear 0s , width .2s linear 0s , line-height .2s linear 0s;
+	transition: color .2s linear 0s , font-size .2s linear 0s , border-color .2s linear .2s , height .2s linear 0s , width .2s linear 0s , line-height .2s linear 0s;
+	webkit-transition: color .2s linear 0s , font-size .2s linear 0s , border-color .2s linear .2s , height .2s linear 0s , width .2s linear 0s , line-height .2s linear 0s;
+	width: 41px;
+}
+nav.n1 .menus a.a1 .link-text
+{
+	bottom: 13px;
+	color: #565a60;
+	font-size: 13px;
+	moz-transition: all .2s linear 0s;
+	ms-transition: all .2s linear 0s;
+	o-transition: all .2s linear 0s;
+	position: absolute;
+	right: 25px;
+	text-transform: uppercase;
+	transition: all .2s linear 0s;
+	webkit-transition: all .2s linear 0s;
+}
+.link-text1
+{
+	bottom: 13px;
+	color: #565a60;
+	font-size: 13px;
+	moz-transition: all .2s linear 0s;
+	ms-transition: all .2s linear 0s;
+	o-transition: all .2s linear 0s;
+	position: absolute;
+	right: 35px;
+	text-transform: uppercase;
+	transition: all .2s linear 0s;
+	webkit-transition: all .2s linear 0s;
+}
+span.link-text2
+{
+	bottom: 13px;
+	color: #565a60;
+	font-size: 13px;
+	moz-transition: all .2s linear 0s;
+	ms-transition: all .2s linear 0s;
+	o-transition: all .2s linear 0s;
+	position: absolute;
+	right: 18px;
+	text-transform: uppercase;
+	transition: all .2s linear 0s;
+	webkit-transition: all .2s linear 0s;
+}
+nav.n1 .menus ul li.l1:hover
+{
+	background-color: #e8e8e6;
+	border-left-color: #14b6ea;
+	border-right-color: #ffea00;
+	box-shadow: 0 0 10px rgba(0,0,0,1);
+}
+nav.n1 .menus ul li.l1:active
+{
+	background: #dddfe2;
+	box-shadow: 0 0 0 rgba(0,0,0,0);
+}
+nav.n1 .menus ul li.l1:hover .link-text
+{
+	opacity: 0;
+}
+nav.n1 .menus ul li.l1:hover i:before
+{
+	border-color: transparent;
+	border-radius: 500px;
+	height: 66px;
+	line-height: 60px;
+	moz-transition: color .2s linear 0s , font-size .2s linear 0s , border-color 0s linear .2s , height .2s linear 0s , width .2s linear 0s , line-height .2s linear 0s;
+	ms-transition: color .2s linear 0s , font-size .2s linear 0s , border-color 0s linear .2s , height .2s linear 0s , width .2s linear 0s , line-height .2s linear 0s;
+	o-transition: color .2s linear 0s , font-size .2s linear 0s , border-color 0s linear .2s , height .2s linear 0s , width .2s linear 0s , line-height .2s linear 0s;
+	transition: color .2s linear 0s , font-size .2s linear 0s , border-color .2s linear 0s , height .2s linear 0s , width .2s linear 0s , line-height .2s linear 0s;
+	webkit-transition: color .2s linear 0s , font-size .2s linear 0s , border-color 0s linear .2s , height .2s linear 0s , width .2s linear 0s , line-height .2s linear 0s;
+	width: 66px;
+}

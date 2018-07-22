@@ -1,0 +1,181 @@
+﻿nav.btn2
+{
+	background: #eee;
+	bottom: 0;
+	box-shadow: 0 0 10px rgba(0,0,0,.5);
+	clear: both;
+	float: none;
+	position: static;
+	right: 0;
+	top: 0;
+	width: auto;
+}
+nav.btn2 ul
+{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+nav.btn2 li
+{
+	float: none;
+	width: 100%;
+}
+nav.btn2 li a
+{
+	box-sizing: border-box;
+	color: #757575;
+	display: block;
+	line-height: 64px;
+	moz-box-sizing: border-box;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	transition: all .5s ease 0s;
+	webkit-box-sizing: border-box;
+	webkit-transition: all .5s ease 0s;
+	width: 100%;
+	z-index: 0;
+}
+nav.btn2 li a:hover
+{
+	color: #fff;
+	transition: all .2s ease 0s;
+	webkit-transition: all .2s ease 0s;
+}
+nav.btn2 li:first-child a
+{
+	border-right: 8px solid #c9c9c9;
+}
+nav.btn2 li:nth-child(2) a
+{
+	border-right: 8px solid #c9c9c9;
+}
+nav.btn2 li:nth-child(3) a
+{
+	border-right: 8px solid #c9c9c9;
+}
+nav.btn2 li:nth-child(4) a
+{
+	border-right: 8px solid #c9c9c9;
+}
+nav.btn2 li:nth-child(5) a
+{
+	border-right: 8px solid #c9c9c9;
+}
+nav.btn2 li:nth-child(6) a
+{
+	border-right: 8px solid #c9c9c9;
+}
+nav.btn2 li:nth-child(7) a
+{
+	border-right: 8px solid #c9c9c9;
+}
+nav.btn2 li:last-child a
+{
+	border-right: 8px solid #c9c9c9;
+}
+nav.btn2 li a:after
+{
+	content: "";
+	height: 100%;
+	position: absolute;
+	right: 0;
+	top: 0;
+	transition: all .5s ease 0s;
+	webkit-transition: all .5s ease 0s;
+	width: 0;
+	z-index: -1;
+}
+nav.btn2 li a:hover:after
+{
+	width: 100%;
+}
+nav.btn2 li:first-child a:after
+{
+	background: #c9c9c9;
+	border-radius: 20px 10px 10px 20px;
+}
+nav.btn2 li:nth-child(2) a:after
+{
+	background: #c9c9c9;
+	border-radius: 20px 10px 10px 20px;
+}
+nav.btn2 li:nth-child(3) a:after
+{
+	background: #c9c9c9;
+	border-radius: 20px 10px 10px 20px;
+}
+nav.btn2 li:nth-child(4) a:after
+{
+	background: #c9c9c9;
+	border-radius: 20px 10px 10px 20px;
+}
+nav.btn2 li:nth-child(5) a:after
+{
+	background: #c9c9c9;
+	border-radius: 20px 10px 10px 20px;
+}
+nav.btn2 li:nth-child(6) a:after
+{
+	background: #c9c9c9;
+	border-radius: 20px 10px 10px 20px;
+}
+nav.btn2 li:nth-child(7) a:after
+{
+	background: #c9c9c9;
+	border-radius: 20px 10px 10px 20px;
+}
+nav.btn2 li:last-child a:after
+{
+	background: #c9c9c9;
+	border-radius: 20px 10px 10px 20px;
+}
+nav.btn2 li:first-child a.active:hover
+{
+	color: #fff;
+	transition: all .2s ease 0s;
+	webkit-transition: all .2s ease 0s;
+}
+nav.btn2 li:nth-child(2) a.active:hover
+{
+	color: #fff;
+	transition: all .2s ease 0s;
+	webkit-transition: all .2s ease 0s;
+}
+nav.btn2 li:nth-child(3) a.active:hover
+{
+	color: #fff;
+	transition: all .2s ease 0s;
+	webkit-transition: all .2s ease 0s;
+}
+nav.btn2 li:nth-child(4) a.active:hover
+{
+	color: #fff;
+	transition: all .2s ease 0s;
+	webkit-transition: all .2s ease 0s;
+}
+nav.btn2 li:nth-child(5) a.active:hover
+{
+	color: #fff;
+	transition: all .2s ease 0s;
+	webkit-transition: all .2s ease 0s;
+}
+nav.btn2 li:nth-child(6) a.active:hover
+{
+	color: #fff;
+	transition: all .2s ease 0s;
+	webkit-transition: all .2s ease 0s;
+}
+nav.btn2 li:nth-child(7) a.active:hover
+{
+	color: #fff;
+	transition: all .2s ease 0s;
+	webkit-transition: all .2s ease 0s;
+}
+nav.btn2 li:last-child a.active:hover
+{
+	color: #fff;
+	transition: all .2s ease 0s;
+	webkit-transition: all .2s ease 0s;
+}

@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+
+{% load tinymce_tags %}
+{% load static %}
+	{% block content %}
+	
+<style  type='text/css'>
+	.btn {
+		border-radius: 10px;
+		border: medium solid #FFF;
+		box-shadow: 0 0 10px rgba(0,0,0,0.5);
+		width: 100%;
+		background-color: #EEE;
+		padding: 0;
+	}
+
+
+	.btn-service {
+		border: thin solid #FFF;
+		background-color: #EEE;
+		display: block;
+		float: left;
+		width: 100%;
+		height: 5rem;
+		text-align: center;
+		vertical-align: middle;
+		color: gray;
+	
+	}
+	
+	.btn-service a {
+		display: inline-block;
+		color: gray;
+		vertical-align: middle;
+		width: 100%;
+		height: 100%;
+		vertical-align: middle;
+		padding-top: 1.5rem;
+		z-index: 10;
+	}
+	
+	.btn-service a:hover {		
+		color: #FFF;
+		text-shadow: 1px 1px 2px black, 0 0 1em ivory;
+		background-color: silver;
+	}
+	
+	.left_ribbon {
+		width: 2%;
+		background-color: #9A7;
+		height: 5rem;
+		position: absolute;
+		z-index: 3;
+	}
+	
+	.caption {
+		padding: 0.5rem;
+		background-color: #556;
+		color: #FFF;
+	}
+	
+	.caption:hover {
+		background-color: #889;
+		color: #FFD;
+	}
+	
+	
+</style>
+
+
+<main id=main class=site-main role=main>
+    <article id=post-7 class="post-7 page type-page status-publish hentry">
+        <header class=entry-header>
+            <h1 class=entry-title>Услуги</h1>
+        </header><!-- .entry-header -->
+        <div class=entry-content>
+            <p style="text-align: center;">
+                <div style="width: 100%; margin: 0 auto;" class="ml-slider-3-8-1 metaslider metaslider-flex metaslider-134 ml-slider nav-hidden">
+                    <div id=metaslider_container_134>
+                        <div id=metaslider_134 class=flexslider>
+                            <ul class=slides>
+                                <li style="display: block; width: 100%;" class="slide-609 ms-image">
+									<img src="#" height=400 width=800 alt="Купить бетон, продажа бетона" class="slider-image" />
+									<div class=caption-wrap>
+                                       <a href="#" class="slider-link"><div class="caption"> Услуги Профибетон</div></a>
+									    
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <p>&nbsp;</p>
+                <h2>Компания профибетон предлагает следующие услуги:</h2>
+                <nav class=btn>
+                    <ul>
+						{% for service in services %}
+							<li class="btn-service"><p class="left_ribbon"></p><a href="static/media/{{ MEDIA_URL }}{{ service.url }}">{{ service.name }}</a></li>
+						{% endfor %}
+                       
+                    </ul>
+                </nav>
+                <div class="addtoany_share_save_container addtoany_content addtoany_content_bottom">
+                    <div class=addtoany_header>Поделиться:</div>
+                    <div class="a2a_kit a2a_kit_size_32 addtoany_list" data-a2a-url="http://www.profibeton.com.ua/%d1%83%d1%81%d0%bb%d1%83%d0%b3%d0%b8/" data-a2a-title="Услуги"><a class=a2a_button_facebook href="https://www.addtoany.com/add_to/facebook?linkurl=http%3A%2F%2Fwww.profibeton.com.ua%2F%25d1%2583%25d1%2581%25d0%25bb%25d1%2583%25d0%25b3%25d0%25b8%2F&amp;linkname=%D0%A3%D1%81%D0%BB%D1%83%D0%B3%D0%B8" title=Facebook rel="nofollow noopener" target=_blank></a><a class=a2a_button_google_plus href="https://www.addtoany.com/add_to/google_plus?linkurl=http%3A%2F%2Fwww.profibeton.com.ua%2F%25d1%2583%25d1%2581%25d0%25bb%25d1%2583%25d0%25b3%25d0%25b8%2F&amp;linkname=%D0%A3%D1%81%D0%BB%D1%83%D0%B3%D0%B8" title="Google+" rel="nofollow noopener" target=_blank></a><a class=a2a_button_twitter href="https://www.addtoany.com/add_to/twitter?linkurl=http%3A%2F%2Fwww.profibeton.com.ua%2F%25d1%2583%25d1%2581%25d0%25bb%25d1%2583%25d0%25b3%25d0%25b8%2F&amp;linkname=%D0%A3%D1%81%D0%BB%D1%83%D0%B3%D0%B8" title=Twitter rel="nofollow noopener" target=_blank></a></div>
+                </div>
+        </div><!-- .entry-content -->
+        <footer class=entry-footer>
+        </footer><!-- .entry-footer -->
+    </article><!-- #post-## -->
+</main><!-- #main -->
+<script type='text/javascript' src="{% static 'js/slider.js' %}"></script>
+{% endblock %}

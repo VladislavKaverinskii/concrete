@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html>
+<html lang=ru-RU prefix="og: http://ogp.me/ns#">
+<head>
+	{% load static %} 
+	
+	<title>Название сайта </title> <!-- уточнить !!  -->
+	
+	{% include "meta.html" %}
+	{% include "style_links.html" %}
+	{% include "seo.html" %}	
+	{% include "head_js_links.html" %}
+	
+	<link rel=dns-prefetch href="{% static 'https://sinoptik.ua' %}" />
+	<link rel=dns-prefetch href="{% static 'https://ru.wordpress.com' %}" />
+	
+	
+
+</head>
+
+<body class="home page-template-default page page-id-2 custom-background columns-3 mob-menu-slideout-over elementor-default">
+	<div id=page class="hfeed site">
+		<header id=masthead class=logo-side>
+			{% include "header.html" %}
+		</header>
+
+		<div class="mid-content clearfix">
+			<div id=primary class=content-area>
+				<main id=main class=site-main role=main>
+					{% block content %}
+					{% endblock %}
+				</main><!-- #main -->
+			</div><!-- #primary -->
+			<div id=secondary class=widget-area role=complementary>
+				<aside id=black-studio-tinymce-3 class="widget widget_black_studio_tinymce">
+					{% include "side_menu.html" %}
+				</aside>
+				<aside id=facebook-likebox-4 class="widget widget_facebook_likebox">
+					<h2 class=widget-title>
+						<span><a href="https://www.facebook.com/ProfibetonBrovary/">ООО &#171;ПрофиБетон&#187; в Facebook-Подписывайтесь на станичку</a></span>
+					</h2>	
+					<div id=fb-root></div>
+					<div class=fb-page data-href="#" data-width=340 data-height=520 data-hide-cover=false data-show-facepile=true data-show-posts=true>
+						<div class=fb-xfbml-parse-ignore>
+							<blockquote cite="#">
+								<a href="#">ООО &#171;ПрофиБетон&#187; в Facebook-Подписывайтесь на станичку</a>
+							</blockquote>
+						</div>
+					</div>
+				</aside>
+				<aside id=calendar-3 class="widget widget_calendar">
+					<h2 class=widget-title>
+						<span>Календарь</span>
+					</h2>
+					<div id=calendar_wrap class=calendar_wrap>
+						{% include "calendar.html" %}
+					</div>
+				</aside>
+				<aside id=black-studio-tinymce-5 class="widget widget_black_studio_tinymce">
+					<h2 class=widget-title>
+						<span>Погода</span>
+					</h2>
+					<div class=textwidget>
+						<div id=SinoptikInformer class="SinoptikInformer type1c1" style="width: auto;">
+							
+							<div class=siBody>
+								<div id="SinoptikInformer" style="width:273px;" class="SinoptikInformer type1">
+									<div class="siHeader">
+										<div class="siLh">
+											<div class="siMh"><a onmousedown="siClickCount();" class="siLogo" href="https://sinoptik.ua/" target="_blank" rel="nofollow" title="Погода"> </a>Погода <span id="siHeader"></span></div>
+										</div>
+									</div>
+									<div class="siBody"><a onmousedown="siClickCount();" href="https://sinoptik.ua/погода-измаил" title="Погода в Измаиле" target="_blank"><div class="siCity">
+												<div class="siCityName"><span>Измаил</span></div>
+												<div id="siCont0" class="siBodyContent">
+													<div class="siLeft">
+														<div class="siTerm"></div>
+														<div class="siT" id="siT0"></div>
+														<div id="weatherIco0"></div>
+													</div>
+													<div class="siInf">
+														<p>влажность: <span id="vl0"></span></p>
+														<p>давление: <span id="dav0"></span></p>
+														<p>ветер: <span id="wind0"></span></p>
+													</div>
+												</div>
+											</div></a><div class="siLinks">Погода на 10 дней от <a href="https://sinoptik.ua/погода-измаил/10-дней" title="Погода на 10 дней" target="_blank" onmousedown="siClickCount();">sinoptik.ua</a></div>
+									</div>
+									<div class="siFooter">
+										<div class="siLf">
+											<div class="siMf"></div>
+										</div>
+									</div>
+								</div>
+								<script type="text/javascript" charset="UTF-8" src="//sinoptik.ua/informers_js.php?title=4&amp;wind=3&amp;cities=303009806&amp;lang=ru"></script>
+							</div>
+							<div class=siFooter>
+								<div class=siLf>
+									<div class=siMf></div>
+								</div>
+							</div>
+						</div>
+						<p>
+							<script type="text/javascript" data-pagespeed-no-defer>
+								pagespeed.lazyLoadImages.overrideAttributeFunctions();
+							</script>
+			
+							<!-- <script type="text/javascript" charset=UTF-8 src="//sinoptik.ua/informers_js.php?title=4&amp;wind=3&amp;cities=303002317&amp;lang=ru"></script>-->
+						</p>
+					</div>
+				</aside>
+				<aside id=search-3 class="widget widget_search">
+					<h2 class=widget-title><span>Что ищем?</span></h2>
+					<form role=search method=get class=search-form action="#">
+						<label>
+							<span class=screen-reader-text>Найти:</span>
+							<input type=search class=search-field placeholder="Поиск&hellip;" value="" name=s />
+						</label>
+						<input type=submit class=search-submit value="Поиск"/>
+					</form>
+				</aside>
+			</div>
+		</div><!-- #secondary -->
+	</div><!-- #content -->
+	<footer id=colophon class=site-footer>
+		<div class=bottom-footer>
+			<div class="mid-content clearfix">
+				<div class=copy-right>
+					&copy; 2018 Название сайта	
+				</div><!-- .copy-right -->
+				<div class=site-info>
+					<!-- Design by <a href="http://www.moycomp.kiev.ua/" title="MoyComp.Kiev.ua" target="_blank">МойКомп</a> -->
+				</div><!-- .site-info -->
+			</div>
+		</div>
+	</footer><!-- #colophon  -->
+	
+	<div class=mobmenu-overlay></div>
+	<div style=display:none class="mob-menu-header-holder mobmenu" data-menu-display=mob-menu-slideout-over>
+		<div class=mobmenul-container>
+			<a href="#" class=mobmenu-left-bt>
+				<i class="mob-icon-menu-outline mob-menu-icon"></i>
+				<i class="mob-icon-cancel mob-cancel-button"></i>
+				<span class=left-menu-icon-text>Меню</span>
+			</a>
+		</div>
+	    
+	</div>
+	
+	{% include "call_popup.html" %}	
+	
+	<div id=wpfront-scroll-top-container>
+		<img src="{% static 'img/103.png.pagespeed.ce.WQIxGbxUpV.png' %}" alt="" data-pagespeed-url-hash=2037996856 onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);"/>
+	</div>
+	
+	{% include "footer_js_links.html" %}
+	
+	<div style=display:none>
+	</div>
+	<!--[if lte IE 8]>
+	<link rel='stylesheet' id='jetpack-carousel-ie8fix-css'  href='http://www.profibeton.com.ua/wp-content/plugins/jetpack/modules/carousel/jetpack-carousel-ie8fix.css?ver=20121024' type='text/css' media='all' />
+	<![endif]-->
+	
+</body>
+</html>

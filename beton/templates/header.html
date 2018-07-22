@@ -1,0 +1,88 @@
+{% load static %}
+		
+<div class="mid-content clearfix">
+	<div id=site-logo>
+		<a href="http://www.profibeton.com.ua/" rel=home> <!-- ссылка на главную страницу -->
+		
+			<script data-pagespeed-no-defer type='text/javascript' src='{% static "js/a2a_config.js" %}'></script>	
+			<img src="{% static 'img/2Profi_Logo_new_Tel-1024x86-2.png.pagespeed.ce.yApLTgM1TG.png' %}" alt="ПрофиБетон" />
+		</a>
+	</div>
+	<!-- #site-navigation -->
+	<nav class=n1>
+		<div class=menus>
+			<ul class=cleara>
+				<li class=l1>
+					<a class=a1 href="/" title="Главная"> <!-- ссылка на главную страницу -->
+						<i class="fa fa-home" aria-hidden=true></i>
+						<span class=link-text>Главная</span>
+					</a>
+				</li>
+				<li class=l1>
+					<a class=a1 href="/services" title="Услуги"> <!-- ссылка на страницу "Услуги" -->
+						<i class="fa fa-lightbulb-o" aria-hidden=true></i>
+						<span class=link-text>Услуги</span>
+					</a>
+				</li>
+				<li class=l1>
+					<a class=a1 href="http://profibeton.com.ua/доставка_бетона/" title="Доставка"> <!-- ссылка на страницу "Доставка" -->
+						<i class="fa fa-car" aria-hidden=true></i>
+						<span class=link-text>Доставка</span>
+					</a>
+				</li>
+				<li class=l1>
+					<a class=a1 href="http://profibeton.com.ua/цены/" title="Цены"> <!-- ссылка на страницу "Цены" -->
+						<i class="fa fa-money" aria-hidden=true></i>
+						<span class=link-text1>Цены</span>
+					</a>
+				</li>
+				<li class=l1>
+					<a class=a1 href="http://profibeton.com.ua/обьекты/" title="Обьекты"> <!-- ссылка на страницу "Обьекты" -->
+						<i class="fa fa-object-group" aria-hidden=true></i>
+						<span class=link-text>Обьекты</span>
+					</a>
+				</li>
+				<li class=l1>
+					<a class=a1 href="http://profibeton.com.ua/партнеры/" title="Партнери"> <!-- ссылка на страницу "Партнери" -->
+						<i class="fa fa-group" aria-hidden=true></i>
+						<span class=link-text>Партнеры</span>
+					</a>
+				</li>
+				<li class=l1>
+					<a class=a1 href="http://profibeton.com.ua/отзывы/" title="Отзывы"> <!-- ссылка на страницу "Отзывы" -->
+						<i class="fa fa-commenting" aria-hidden=true></i>
+						<span class=link-text>Отзывы</span>
+					</a>
+				</li>
+				<li class=l1>
+					<a class=a1 href="http://www.profibeton.com.ua/%D1%84%D0%BE%D1%82%D0%BE/" title="Галерея"> <!-- ссылка на страницу "Галерея" -->
+						<i class="fa fa-photo" aria-hidden=true></i>
+						<span class=link-text>Галерея</span>
+					</a>
+				</li>
+				<li class=l1>
+					<a class=a1 href="http://profibeton.com.ua/контакты/" title="Контакты"> <!-- ссылка на страницу "Контакты" -->
+						<i class="fa fa-phone" aria-hidden=true></i>
+						<span class=link-text2>Контакты</span>
+					</a>
+				</li>
+				<li class=l1>
+					<a class=a1 href="http://profibeton.com.ua/работа_в_профибетон/" title="Вакансии"> <!-- ссылка на страницу "Вакансии" -->
+						<i class="fa fa-briefcase" aria-hidden=true></i>
+						<span class=link-text2>Вакансии</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+</div>
+<div class=social-icons>
+</div>
+<script>
+	jQuery(document).ready(function($) {
+		$(window).resize(function() {
+			var socialHeight = $('.social-icons').outerHeight();
+			$('.social-icons').css('margin-top', -(socialHeight / 2));
+		}).resize();
+	});
+</script>

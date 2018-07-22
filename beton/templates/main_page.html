@@ -1,0 +1,74 @@
+﻿{% extends 'base.html' %}
+
+{% load tinymce_tags %}
+{% load static %}
+	{% block content %}
+
+		<article id=post-2 class="post-2 page type-page status-publish has-post-thumbnail hentry">
+			<header class=entry-header>
+				<h1 class=entry-title>Профибетон</h1>
+			</header><!-- .entry-header -->
+			<div class=entry-content>
+				<h1>
+					ООО &#171;Профибетон&#187; Производство и Доставка Бетона в Бровары, Чернигов,
+					Борисполь, Броварской и Бориспольский р-н, Киев &#8212; Левый берег
+				</h1>
+				<p style="text-align: left;">
+					Компания &#171;Профибетон&#187; производcтво и доставка бетона всех марок. 
+					А так же предоставляет ряд услуг таких как:услуги бетононасоса,доставка щебня,
+					доставка песка,продажа строймусора,бетонные и цементные смеси.Среди всех 
+					строительных материалов бетон от Профибетон занимает особенное место. 
+					Бетон является основой всех современных технологий в строительстве. 
+					Любого рода строительство не осуществляется без использования бетона и бетонных
+					смесей, потому что он является наиболее прочным из всех строительных материалов.
+				</p>
+				
+				{% for block in page_blocks %}
+				
+					<h2 style="text-align: center;">{{ block.title }}</h2>
+					
+					{% if block.image %}
+						<p>
+							<a href='static/media/{{ MEDIA_URL }}{{ block.image }}'>
+								<img data-attachment-id=1087 src='static/media/{{ MEDIA_URL }}{{ block.image }}'
+								data-permalink='static/media/{{ MEDIA_URL }}{{ block.image }}'
+								data-orig-file="static/media/{{ MEDIA_URL }}{{ block.image }}"
+								data-orig-size="319,319" data-image-title="Бетон" data-image-description=""
+								data-medium-file="static/media/{{ MEDIA_URL }}{{ block.image }}" data-large-file="static/media/{{ MEDIA_URL }}{{ block.image }}"
+								class="alignleft wp-image-1087" title="профибетон" data-pagespeed-lazy-src="static/media/{{ MEDIA_URL }}{{ block.image }}"
+								alt="профибетон" width=300 height=300
+								data-pagespeed-lazy-srcset="img/Profi.jpg 319w, img/Profi-200x200.jpg 200w, static/media/{{ MEDIA_URL }}{{ block.image }} 300w, static/media/{{ MEDIA_URL }}}{{ block.image }}"
+								sizes="(max-width: 300px) 100vw, 300px" data-pagespeed-url-hash=3150159609  onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);"
+								onerror="this.onerror=null; pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);"/>
+							</a>
+						</p>
+						
+					{% endif %}					
+					
+					<p class="main_test_block" style="text-align: left;">
+						{% autoescape off %}
+						{{ block.main_text|safe }}
+						{% endautoescape %}
+					</p>
+				
+				{% endfor %}
+				
+				
+				
+				
+				<div class="addtoany_share_save_container addtoany_content addtoany_content_bottom">
+					<div class=addtoany_header>Поделиться:</div>
+					<div class="a2a_kit a2a_kit_size_32 addtoany_list" data-a2a-url="http://www.profibeton.com.ua/" data-a2a-title="Профибетон">
+						<a class=a2a_button_facebook href="#" title=Facebook rel="nofollow noopener" target=_blank></a>
+						<a class=a2a_button_google_plus href="#" title="Google+" rel="nofollow noopener" target=_blank></a>
+						<a class=a2a_button_twitter href="#" title=Twitter rel="nofollow noopener" target=_blank></a>
+					</div>
+				</div>
+			</div><!-- .entry-content -->
+			<footer class=entry-footer>
+			</footer><!-- .entry-footer -->
+		</article><!-- #post-## -->
+		<div id=comments class=comments-area>
+			{% include "comment_form.html" %}
+		</div><!-- #comments -->
+	{% endblock %}

@@ -1,0 +1,131 @@
+.woocommerce-area
+{
+	background: #fff;
+	margin: 0 0 20px;
+	margin-bottom: 40px;
+	padding: 20px;
+	position: relative;
+}
+.woocommerce .woocommerce-breadcrumb
+{
+	border-bottom: 1px solid #eee;
+	padding: 0 0 6px;
+}
+.woocommerce .woocommerce-breadcrumb a
+{
+	text-decoration: none;
+}
+.woocommerce .woocommerce-breadcrumb a:hover
+{
+	color: #e66432;
+}
+.woocommerce .page-title
+{
+	margin-bottom: 20px;
+}
+.woocommerce ul.products li.product .onsale,.woocommerce span.onsale
+{
+	background: #e66432;
+}
+.woocommerce ul.products li.product a img
+{
+	margin-bottom: 0;
+}
+.woocommerce ul.products li.product h3
+{
+	border-bottom: 1px solid #eee;
+	border-top: 2px solid #e66432;
+	color: #333;
+	text-align: center;
+}
+.parallax-section .woocommerce ul.products li.product h3,.parallax-section .woocommerce ul.products li.product .price,.parallax-section .woocommerce a
+{
+	color: inherit;
+}
+.parallax-section .woocommerce ul.products li.product h3
+{
+	border-bottom-color: rgba(255,255,255,.2);
+}
+.woocommerce ul.products li.product .price
+{
+	color: #333;
+	font-size: 16px;
+	margin-bottom: 0;
+	padding: 10px;
+	text-align: center;
+}
+.woocommerce ul.products li.product .price del
+{
+	display: inline-block;
+}
+.woocommerce ul.products li.product .button
+{
+	background: #e66432;
+	border-radius: 0;
+	color: #fff;
+	display: block;
+	font-weight: normal;
+	margin: 0;
+	text-align: center;
+}
+.woocommerce a.added_to_cart
+{
+	display: none;
+}
+.woocommerce nav.woocommerce-pagination ul
+{
+	border: 0;
+}
+.woocommerce nav.woocommerce-pagination ul li
+{
+	border: none;
+	margin: 0 2px;
+}
+.woocommerce nav.woocommerce-pagination ul li a,.woocommerce nav.woocommerce-pagination ul li span
+{
+	background: #e66432;
+	color: #fff;
+}
+.woocommerce nav.woocommerce-pagination ul li a:focus,.woocommerce nav.woocommerce-pagination ul li a:hover,.woocommerce nav.woocommerce-pagination ul li span.current
+{
+	background: #000;
+	color: #fff;
+}
+.woocommerce #respond input#submit.alt,.woocommerce a.button.alt,.woocommerce button.button.alt,.woocommerce input.button.alt
+{
+	background: #e66432;
+	border-radius: 0;
+	font-weight: normal;
+}
+.woocommerce #respond input#submit.alt:hover,.woocommerce a.button.alt:hover,.woocommerce button.button.alt:hover,.woocommerce input.button.alt:hover
+{
+	background: #e06536;
+}
+.woocommerce div.product p.price,.woocommerce div.product span.price
+{
+	color: #333;
+}
+.woocommerce-review-link,.product_meta a
+{
+	text-decoration: none;
+}
+.woocommerce #respond input#submit.alt.disabled,.woocommerce #respond input#submit.alt.disabled:hover,.woocommerce #respond input#submit.alt:disabled,.woocommerce #respond input#submit.alt:disabled:hover,.woocommerce #respond input#submit.alt:disabled[disabled],.woocommerce #respond input#submit.alt:disabled[disabled]:hover,.woocommerce a.button.alt.disabled,.woocommerce a.button.alt.disabled:hover,.woocommerce a.button.alt:disabled,.woocommerce a.button.alt:disabled:hover,.woocommerce a.button.alt:disabled[disabled],.woocommerce a.button.alt:disabled[disabled]:hover,.woocommerce button.button.alt.disabled,.woocommerce button.button.alt.disabled:hover,.woocommerce button.button.alt:disabled,.woocommerce button.button.alt:disabled:hover,.woocommerce button.button.alt:disabled[disabled],.woocommerce button.button.alt:disabled[disabled]:hover,.woocommerce input.button.alt.disabled,.woocommerce input.button.alt.disabled:hover,.woocommerce input.button.alt:disabled,.woocommerce input.button.alt:disabled:hover,.woocommerce input.button.alt:disabled[disabled],.woocommerce input.button.alt:disabled[disabled]:hover
+{
+	background: #e66432;
+}
+.woocommerce #respond input#submit,.woocommerce a.button,.woocommerce button.button,.woocommerce input.button
+{
+	background: #000;
+	border-radius: 0;
+	color: #fff;
+	font-weight: normal;
+}
+.woocommerce #respond input#submit:hover,.woocommerce a.button:hover,.woocommerce button.button:hover,.woocommerce input.button:hover
+{
+	background: #e66432;
+	color: #fff;
+}
+.woocommerce .widget_price_filter .ui-slider .ui-slider-handle,.woocommerce .widget_price_filter .ui-slider .ui-slider-range
+{
+	background-color: #e66432;
+}
