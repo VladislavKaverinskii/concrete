@@ -31,4 +31,6 @@ def get_slider_data(request):
     data = json.dumps(data)
     return HttpResponse(data, content_type='application/json')
 	
+
+	
 	

@@ -6,34 +6,16 @@
 </h2>
 <div class=textwidget>
 	<nav class=btn2>
-		<ul>
-			<li>
-				<a href="http://www.profibeton.com.ua/доставка_бетона/">Доставка бетона</a>
-			</li>
-			<li>
-				<a href="http://www.profibeton.com.ua/услуги/продажа-бетона/">Бетонные смеси</a>
-			</li>
-			<li>
-				<a href="http://www.profibeton.com.ua/услуги/цемент/">Цементные смеси</a>
-			</li>
-			<li>
-				<a href="http://www.profibeton.com.ua/услуги/продажа-песка/">Продажа песка</a>
-			</li>
-			<li>
-				<a href="http://www.profibeton.com.ua/услуги/продажа-щебня/">Продажа щебня</a>
-			</li>
-			<li>
-				<a href="http://www.profibeton.com.ua/жби/">ЖБИ</a>
-			</li>
-			<li>
-				<a href="http://www.profibeton.com.ua/услуги/услуги-бетононасоса/">Услуги бетононасоса</a>
-			</li>
-			<li>
-				<a href="http://www.profibeton.com.ua/заказать_бетон/">Заказать бетон</a>
-			</li>
-			<li>
-				<a href="http://www.profibeton.com.ua/заказать_цементный_раствор/">Заказать цементный раствор</a>
-			</li>
-		</ul>
+		<ul class="menu_list"></ul>
 	</nav>
 </div>
+{% verbatim %}
+<script id="menu_item_tmpl" type="text/x-handlebars-template">
+	{{#each slider_data}}
+	    <li>
+			<a href="static/media/{{ MEDIA_URL }}{{ url }}">{{ name }}</a>
+		</li>
+	{{/each}}
+</script>
+{% endverbatim %}
+<script type='text/javascript' src="{% static 'js/side_menu.js' %}"></script>
