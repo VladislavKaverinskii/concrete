@@ -10,7 +10,7 @@ from django.contrib.auth.forms import UserCreationForm
 import json
 from datetime import datetime
 
-from .models import MainPageBlock, Service
+from .models import MainPageBlock, Service, Deleivery, DeleiveryPoint
 
 def index(request):
     page_blocks = MainPageBlock.objects.all().order_by("order")
@@ -31,6 +31,30 @@ def get_slider_data(request):
     data = json.dumps(data)
     return HttpResponse(data, content_type='application/json')
 	
+
+def delivery(request):
+    info = Deleivery.objects.all()
+    deleivery_points = DeleiveryPoint.objects.all().order_by("town")
+    return render(request, "delivery.html", {"info": info, "points": deleivery_points})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	
 	

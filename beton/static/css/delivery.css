@@ -1,0 +1,20 @@
+#supsystic-table-9 {
+	width: 100%;
+	
+}
+
+
+#supsystic-table-9 td {
+	border: thin solid silver;
+	background-color: #DFDCDA;
+	border-radius: 1.5rem;
+	padding: 1.5rem;
+	
+}
+
+#supsystic-table-9 tr:first-child td {
+	border: thin solid #DFDCDA;
+	background-color: #FFF;
+	font-weight: bold;
+}
+

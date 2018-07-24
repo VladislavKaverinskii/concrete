@@ -1,0 +1,101 @@
+﻿{% extends 'base.html' %}
+
+{% load tinymce_tags %}
+{% load static %}
+
+{% block content %}
+    <link rel='stylesheet' href="{% static 'css/delivery.css' %}" />
+    <article id=post-362 class="post-362 page type-page status-publish hentry">
+        
+        <div class=entry-content>
+		    {% for block in info %}
+				<header class=entry-header>
+					<h1 class=entry-title>{{ block.name }}</h1>
+				</header><!-- .entry-header -->
+				<p>
+					<div>
+					<a href="static/media/{{ MEDIA_URL }}{{ block.illustration_1.image }}">
+						<img data-attachment-id=837 class="wp-image-837 alignleft" src="static/media/{{ MEDIA_URL }}{{ block.illustration_1.image }}"
+						alt="Профибетон" width=321 height=241 srcset="" sizes="" />
+					</a>
+					<p>
+						{{ block.main_text_1|safe }}
+					</p>
+					</div>
+					<a href="static/media/{{ MEDIA_URL }}{{ block.illustration_2.image }}">
+						<img data-attachment-id=837 class="wp-image-837 alignleft" src="static/media/{{ MEDIA_URL }}{{ block.illustration_2.image }}"
+						alt="Профибетон" width=321 height=241 srcset="" sizes="" />
+					</a>
+					<div>
+								
+					<p>
+						{{ block.main_text_2|safe }}
+					</p>
+					</div>					
+				</p>				
+			{% endfor %}
+			
+            <p>
+				<img data-attachment-id=1558 data-permalink="{% static 'img/region_2.png' %}"
+				data-orig-file="{% static 'img/region_2.png' %}" data-orig-size="350,236" data-comments-opened=1
+				data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}"
+				data-image-title="область" data-image-description="" data-medium-file="{% static 'img/region_2.png' %}"
+				data-large-file="{% static 'img/region_2.png' %}" class="wp-image-1558 aligncenter"
+				src="{% static 'img/region_2.png' %}" alt="" width=412 height=278
+				srcset="{% static 'img/region_2.png' %} 350w, {% static 'img/region_2.png' %}" sizes="(max-width: 412px) 100vw, 412px" />
+			</p>
+            
+			<div class="supsystic-table-loader spinner" style="background-color: #000000"></div>
+            <div id=supsystic-table-9_87567 class="supsystic-tables-wrap " style=" width: 100%;  ">
+                <table id=supsystic-table-9 class="supsystic-table border lightboxImg cell-border " >
+                    <thead>
+                        <tr>
+                            <th style="width:66.4577%; padding: 0 !important;"></th>
+                            <th style="width:33.5423%; padding: 0 !important;"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-cell-id=A1 data-x=0 data-y=1 class="fsize_22" data-cell-type=text data-original-value="Населенный пункт" data-order="Населенный пункт" style="min-width: 66.4577%; width: 66.4577%;"> Населенный пункт </td>
+                            <td data-cell-id=B1 data-x=1 data-y=1 class="fsize_22" data-cell-type=text data-original-value="Цена.грн" data-order="Цена.грн" style="min-width: 33.5423%; width: 33.5423%;"> Цена.грн </td>
+                        </tr>
+						{% for block in points %}
+							<tr>
+								<td data-cell-id=A2 data-x=0 data-y=2 class=bg-ede8ed data-cell-type=text data-original-value="{{ block.town }}" data-order="{{ block.town }}"> {{ block.town }} </td>
+								<td data-cell-id=B2 data-x=1 data-y=2 class=bg-ede8ed data-cell-type=text data-cell-format-type=number data-original-value=390 data-order=390> {{ block.price }} </td>
+							</tr>
+						{% endfor %}                       
+                    </tbody>
+                </table><!-- /#supsystic-table-9.supsystic-table -->
+            </div><!-- /.supsystic-tables-wrap -->
+            <!-- Tables Generator by Supsystic -->
+            <!-- Version: 1.8.6 -->
+            <!-- http://supsystic.com/ -->
+			<hr />
+            <p>Доставка в другие регионы уточняйте у менеджера:
+				{% for block in info %}
+					<strong> {{ block.phone }} </strong>
+				{% endfor %}
+			</p>
+			
+            <p><noscript></p>
+            <div>
+				<img data-pagespeed-lazy-src="https://mc.yandex.ru/watch/31428038" style="position:absolute; left:-9999px;" alt="" data-pagespeed-url-hash=2282973945 src="/pagespeed_static/1.JiBnMqyl6S.gif" onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" />
+			</div>
+            <p></noscript></p>
+            <p>
+                <!-- /Yandex.Metrika counter -->
+            </p>
+            <div class="addtoany_share_save_container addtoany_content addtoany_content_bottom">
+                <div class=addtoany_header>Поделиться:</div>
+                <div class="a2a_kit a2a_kit_size_32 addtoany_list" data-a2a-url="" data-a2a-title="Доставка бетона">
+					<a class=a2a_button_facebook href="" title=Facebook rel="nofollow noopener" target=_blank></a>
+					<a class=a2a_button_google_plus href="" title="Google+" rel="nofollow noopener" target=_blank></a>
+					<a class=a2a_button_twitter href="" title=Twitter rel="nofollow noopener" target=_blank></a>
+				</div>
+            </div>
+        </div><!-- .entry-content -->
+        <footer class=entry-footer>
+        </footer><!-- .entry-footer -->
+    </article><!-- #post-## -->
+{% endblock %}

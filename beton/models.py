@@ -2,7 +2,8 @@ from django.db import models
 from django.conf import settings
 from tinymce.models import HTMLField
 from tinymce.widgets import TinyMCE
-
+import psycopg2
+from django.contrib.postgres.fields import ArrayField
 
 class MainPageBlock(models.Model):
     class Meta:
@@ -28,3 +29,29 @@ class Service(models.Model):
     def __str__(self):
         return self.name[0:300]
 
+class DeleiveryImage(models.Model):
+    image = models.ImageField(blank=True, upload_to='img/media/%Y/%m/%d', help_text='150x300px', verbose_name='Иллюстрации')
+	
+class DeleiveryPoint(models.Model):
+    town = models.CharField(max_length=60, blank=True, verbose_name='Населённый пункт')
+    price = models.CharField(max_length=15, blank=True, verbose_name='Цена')
+    def __str__(self):
+        return self.town
+
+
+class Deleivery(models.Model):
+    class Meta:
+        db_table = "DELIVERY"
+    
+    name = models.CharField(max_length=500, blank=True, verbose_name='Заголовок раздела')
+    illustration_1 = models.ForeignKey(DeleiveryImage, blank=True, null=True, verbose_name='Иллюстрация 1', on_delete=models.CASCADE, related_name='+')
+    illustration_2 = models.ForeignKey(DeleiveryImage, blank=True, null=True, verbose_name='Иллюстрация 2', on_delete=models.CASCADE, related_name='q+')
+    main_text_1 = HTMLField(blank=True, verbose_name='Основной текст')
+    main_text_2 = HTMLField(blank=True, verbose_name='Разъясняющий текст')
+    phone = models.CharField(max_length=15, blank=True, verbose_name='Телефон')
+
+    def __str__(self):
+        return self.name[0:300]
+
+		
+		
