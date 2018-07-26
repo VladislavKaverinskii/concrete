@@ -10,7 +10,7 @@ from django.contrib.auth.forms import UserCreationForm
 import json
 from datetime import datetime
 
-from .models import MainPageBlock, Service, Deleivery, DeleiveryPoint
+from .models import MainPageBlock, Service, Deleivery, DeleiveryPoint, MaterialPrice
 
 def index(request):
     page_blocks = MainPageBlock.objects.all().order_by("order")
@@ -38,7 +38,31 @@ def delivery(request):
     return render(request, "delivery.html", {"info": info, "points": deleivery_points})
 
 
+def price_page(request):
+    materials = MaterialPrice.objects.all().order_by("type")
 
+    return render(request, "price.html", {"materials": materials})
+	
+
+def get_price_list(request):
+    materials = MaterialPrice.objects.all().order_by("type")
+    tmp_materials = {}
+    for i in materials:
+        if str(i.type.name) not in tmp_materials:
+            tmp_materials[str(i.type.name)] = {}
+
+    for i in materials:
+        if str(i.sub_type) not in tmp_materials[str(i.type.name)]:
+            tmp_materials[str(i.type.name)][str(i.sub_type)] = {}
+
+    for i in materials:
+        if str(i.material_class) not in tmp_materials[str(i.type.name)][str(i.sub_type)]:
+            tmp_materials[str(i.type.name)][str(i.sub_type)][str(i.material_class)] = i.price
+
+    print (tmp_materials)
+
+    data = json.dumps(tmp_materials)
+    return HttpResponse(data, content_type='application/json')
 
 
 

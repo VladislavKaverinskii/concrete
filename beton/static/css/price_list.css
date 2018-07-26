@@ -1,0 +1,25 @@
+.price_table {
+	width: 100%;
+}
+
+.price_table td {
+	border-radius: 1.5rem;
+	padding: 1.5rem;
+	border: thin solid silver;
+	text-align: center;
+}
+
+.head_price {
+	background-color: #DEDEDE;
+}
+
+.body_price {
+	background-color: ivory;
+}
+
+.sp_price {
+	background-color: #FFF;
+	border: #FFF solid silver;
+	height: 1.5rem;
+	width: 100%;
+}

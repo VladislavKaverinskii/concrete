@@ -53,5 +53,46 @@ class Deleivery(models.Model):
     def __str__(self):
         return self.name[0:300]
 
+class MaterialType(models.Model):
+    name = models.CharField(max_length=60, blank=True, verbose_name='Название типа материала')
+    
+    def __str__(self):
+        return self.name
+
 		
+class MaterialPrice(models.Model):
+    class Meta:
+        db_table = "MATERIAL_PRICE"
+    
+    type = models.ForeignKey(MaterialType, verbose_name='Тип материала', on_delete=models.CASCADE, related_name='+')
+    sub_type = models.CharField(max_length=100, blank=True, null=True, verbose_name='Марка материала')
+    material_class = models.CharField(max_length=100, verbose_name='Класс материала')
+    price = models.CharField(max_length=100, verbose_name='Цена с НДС, грн.')
+    
+    def __str__(self):
+        return (str(self.type) + " " + str(self.sub_type) + " " + str(self.material_class))
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		

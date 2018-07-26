@@ -8,4 +8,6 @@ urlpatterns = [
     path('services', views.services, name='services'),
 	path('get_slider_data', views.get_slider_data, name='get_slider_data'),
 	path('delivery', views.delivery, name='delivery'),
+	path('price', views.price_page, name='price'),
+	path('get_price_list', views.get_price_list, name='get_price_list'),
 ]
