@@ -10,4 +10,5 @@ urlpatterns = [
 	path('delivery', views.delivery, name='delivery'),
 	path('price', views.price_page, name='price'),
 	path('get_price_list', views.get_price_list, name='get_price_list'),
+	path('get_price_list_as_pdf', views.get_price_list_as_pdf, name='get_price_list_as_pdf'),
 ]
