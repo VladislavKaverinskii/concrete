@@ -10,7 +10,7 @@ from django.contrib.auth.forms import UserCreationForm
 import json
 from datetime import datetime
 
-from .models import MainPageBlock, Service, Deleivery, DeleiveryPoint, MaterialPrice, PricePage
+from .models import MainPageBlock, Service, Deleivery, DeleiveryPoint, MaterialPrice, PricePage, GalleryExtended, Gallery
 
 def index(request):
     page_blocks = MainPageBlock.objects.all().order_by("order")
@@ -162,6 +162,17 @@ def get_price_list_as_pdf(request):
     return response	
 
 
+def get_galery(request):
+    data = Gallery.objects.on_site().is_public()
+    print(len(data))
+
+    return render(request, "galery.html", {"data": data})
+
+from django.views.generic.list import ListView
+
+class GalleryListView(ListView):
+    queryset = Gallery.objects.on_site().is_public()
+    paginate_by = 30
 
 
 

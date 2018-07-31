@@ -1,0 +1,30 @@
+
+{% extends 'base.html' %}
+
+{% load tinymce_tags %}
+
+
+{% load static %}
+	{% block content %}
+    
+	<div style="height: 1000px; width=200px;">
+	{% for galery in data %}
+
+		<div class="photo-gallery">
+			<h2>
+				<a href="{{ gallery.get_absolute_url }}">{{ gallery }}</a>
+			</h2>
+			{% for photo in gallery.sample %}
+				<div class="gallery-photo">
+				    <p>{{ photo.title }}</p>
+					<a href="{{ photo.get_absolute_url }}">
+						<img src="{{ photo.get_display_url }}" class="{% block gallery-photo-class %}{% endblock %}" alt="{{ photo.title }}"/>
+					</a>
+				</div>
+			{% endfor %}
+		</div>
+
+	{% endfor %}
+	</div>
+	
+	{% endblock %}

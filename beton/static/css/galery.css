@@ -1,0 +1,180 @@
+.thumbnail {
+	
+	display: inline-block;
+	float: left;
+}
+
+.photoblock {
+	display: inline-block;
+	float: left;
+	width: 45%;
+	padding: 10px;
+}
+
+.col-md-6 {
+	text-align: center;
+}
+
+.col-md-6 a {
+	display: inline-block;
+	text-align: center;
+}
+
+.col-md-6 p {
+	display: inline-block;
+	float: left;
+	padding: 10px;
+	width: 100%;
+	text-align: center;
+}
+
+.text-center {
+	font-size: 2rem;
+	font-weight: bold;
+	padding: 10px;
+}
+
+.row {
+	display: block;
+	text-align: center;
+}
+
+.row h1 {
+	padding: 5px;
+	margin: 0;
+	text-align: center;
+}
+
+.row h2 {
+	border: thin solid #FFF;
+}
+
+.row p {
+	display: inline-block;
+	float: left;
+	padding: 10px;
+	width: 100%;
+	text-align: center;
+	font-size: 2rem;
+	font-weight: bold;
+	font-style: italic;
+}
+
+.row div {
+	display: inline-block;
+	float: left;
+	padding: 10px;
+	width: 100%;
+}
+
+.row a  {	
+    display: inline-block;
+	text-align: center;
+	width: 100%;
+	padding: 7px;
+}
+
+.row a img {
+	display: inline-block;
+	width: 100%;
+}
+
+.row aside {
+	display: none;
+}
+
+.col-md-10 div a {
+	display: inline-block;
+	float: left;
+	width: 45%;
+	padding: 10px;
+}
+
+.col-md-10 div h2 {
+	display: inline-block;
+	float: left;
+	width: 100%;
+	text-align: center;
+}
+
+
+.col-md-10 div h2 a {
+	display: inline-block;
+	float: left;
+	width: 100%;	
+	border: thin solid #FFF;
+	text-align: center;
+}
+
+.col-lg-12 {
+	display: block;
+	text-align: center;
+}
+
+.col-lg-12 div a {
+	display: inline-block;
+	float: left;
+	width: 100%;
+}
+
+.col-lg-12  h2 {
+	display: inline-block;
+	float: left;
+	width: 100%;
+	text-align: center;
+
+}
+
+.col-lg-12 h2 a {
+	display: inline-block;
+	float: left;
+	width: 100%;
+	text-align: center;
+	border: thin solid #FFF;
+}
+
+.col-lg-12 .photoblock {
+	display: inline-block;
+	float: left;
+	width: 50%;
+	padding: 0px;
+}
+
+.col-lg-12 .muted {
+	display: none;
+}
+
+.log-img_block {
+	display: block;
+	float: left;
+	width: 100%;
+	text-align: center;
+}
+
+.log-img_block img {
+	display: inline-block;
+}
+
+.gal-wrapper {
+	display: block;
+    width: auto;
+	padding: 0;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

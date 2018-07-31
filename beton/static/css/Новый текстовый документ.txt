@@ -1,0 +1,104 @@
+.thumbnail {
+	
+	display: block;
+	float: left;
+}
+
+.photoblock {
+	display: block;
+	float: left;
+	width: 30%;
+	padding: 10px;
+}
+
+.col-md-6 {
+	text-align: center;
+}
+
+.col-md-6 a {
+	display: inline-block;
+	text-align: center;
+}
+
+.col-md-6 p {
+	display: block;
+	float: left;
+	padding: 10px;
+	width: 100%;
+	text-align: center;
+}
+
+.text-center {
+	font-size: 2rem;
+	font-weight: bold;
+	padding: 10px;
+}
+
+.row {
+	text-align: center;
+}
+
+.row h1 {
+	padding: 5px;
+	margin: 0;
+}
+
+.row p {
+	display: block;
+	float: left;
+	padding: 10px;
+	width: 100%;
+	text-align: center;
+	font-size: 2rem;
+	font-weight: bold;
+}
+
+.row div {
+	display: block;
+	float: left;
+	padding: 10px;
+	width: 100%;
+}
+
+.row a  {	
+    display: inline-block;
+	text-align: center;
+	width: 100%;
+	padding: 10px;
+}
+
+.row a img {
+	display: inline-block;
+	width: 100%;
+}
+
+.row aside {
+	display: none;
+}
+
+.col-md-10 div a {
+	display: block;
+	float: left;
+	width: 30%;
+	padding: 10px;
+}
+
+.col-md-10 div h2 {
+	display: block;
+	float: left;
+	width: 100%;
+	text-align: center;
+}
+
+.col-md-10 div h2 a {
+	display: inline-block;
+	float: left;
+	width: 100%;
+	text-align: center;
+	border: thin solid #FFF
+}
+
+
+
+
+
