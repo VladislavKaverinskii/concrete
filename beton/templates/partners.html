@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% load tinymce_tags %}
+{% load static %}
+	{% block content %}
+	
+    <article id=post-17 class="post-17 page type-page status-publish hentry">
+        <header class=entry-header>
+            <h1 class=entry-title>Партнеры</h1>
+        </header><!-- .entry-header -->
+		{% for block in partners %}
+			<div class=entry-content>
+				<p style="text-align: center;">
+					<a href='{{ block.url }}'>
+						<img data-attachment-id=758 data-permalink='static/media/{{ MEDIA_URL }}{{ block.logo }}'
+						data-orig-file='static/media/{{ MEDIA_URL }}{{ block.logo }}'
+						data-orig-size="370,143" data-comments-opened=0
+						 data-image-title=LOGO-DYCKERHOFF data-image-description=""
+						 data-medium-file='static/media/{{ MEDIA_URL }}{{ block.logo }}'
+						 data-large-file='static/media/{{ MEDIA_URL }}{{ block.logo }}'
+						 class="aligncenter wp-image-758 size-full"
+						 data-pagespeed-lazy-src=
+						 alt="{{ block.name }}"
+						 width=370 height=143 data-pagespeed-lazy-srcset="static/media/{{ MEDIA_URL }}{{ block.logo }} 370w, static/media/{{ MEDIA_URL }}{{ block.logo }} 300w"
+						 sizes="(max-width: 370px) 100vw, 370px" data-pagespeed-url-hash=3632071268
+						 src='static/media/{{ MEDIA_URL }}{{ block.logo }}'
+						 />
+					</a>
+				</p>
+				<p style="text-align: center;">
+					<strong>{{ block.name }}</strong>
+				</p>
+				<p style="text-align: center;">
+					{{ block.country }}
+				</p>
+				<p style="text-align: center;"></p>
+
+			</div>
+		{% endfor %}
+
+    </article><!-- #post-## -->
+{% endblock %}

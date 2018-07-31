@@ -10,7 +10,7 @@ from django.contrib.auth.forms import UserCreationForm
 import json
 from datetime import datetime
 
-from .models import MainPageBlock, Service, Deleivery, DeleiveryPoint, MaterialPrice, PricePage, GalleryExtended, Gallery
+from .models import MainPageBlock, Service, Deleivery, DeleiveryPoint, MaterialPrice, PricePage, GalleryExtended, Gallery, Partner
 
 def index(request):
     page_blocks = MainPageBlock.objects.all().order_by("order")
@@ -175,8 +175,9 @@ class GalleryListView(ListView):
     paginate_by = 30
 
 
-
-
+def get_partners(request):
+    partners = Partner.objects.all()
+    return render(request, "partners.html", {"partners": partners})
 
 
 

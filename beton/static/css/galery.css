@@ -126,15 +126,19 @@
 }
 
 .col-lg-12 h2 a {
-	display: inline-block;
-	float: left;
-	width: 100%;
+	/*float: left;
+	width: 100%;*/
+	width: auto;
 	text-align: center;
 	border: thin solid #FFF;
 }
 
-.col-lg-12 .photoblock {
+.col-lg-12 h2 a img {
 	display: inline-block;
+	
+}
+
+.col-lg-12 .photoblock {
 	float: left;
 	width: 50%;
 	padding: 0px;

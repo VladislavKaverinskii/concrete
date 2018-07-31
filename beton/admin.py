@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import MainPageBlock, Service, Deleivery, DeleiveryImage, DeleiveryPoint, MaterialType, MaterialPrice, PricePage, Photo
+from .models import MainPageBlock, Service, Deleivery, DeleiveryImage, DeleiveryPoint, MaterialType, MaterialPrice, PricePage, Photo, Partner
 
 
 admin.site.register(MainPageBlock)
@@ -11,6 +11,7 @@ admin.site.register(DeleiveryPoint)
 admin.site.register(MaterialType)
 admin.site.register(MaterialPrice)
 admin.site.register(PricePage)
+admin.site.register(Partner)
 
 class DeleiveryInline(admin.TabularInline):
     model = Deleivery

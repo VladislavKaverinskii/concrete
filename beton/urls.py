@@ -13,6 +13,7 @@ urlpatterns = [
 	path('get_price_list_as_pdf', views.get_price_list_as_pdf, name='get_price_list_as_pdf'),
 	#path('galery', views.get_galery, name='galery'),
 	path('galery', views.GalleryListView.as_view(),  name='gallery-list'),
+	path('partners', views.get_partners, name='partners'),
 	
 ]
 

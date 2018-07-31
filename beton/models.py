@@ -192,7 +192,17 @@ class GalleryExtended(models.Model):
         return self.gallery.title
 
 
+class Partner(models.Model):
+    class Meta:
+        db_table = "PARTNERS"
+    
+    name = models.CharField(max_length=500, blank=True, verbose_name='Название предприятия')
+    logo = models.ImageField(blank=True, upload_to='img/media/%Y/%m/%d', help_text='150x300px', verbose_name='Логотип')    
+    url = models.CharField(max_length=500, blank=True, default="#", verbose_name='Ссылка')
+    country = models.CharField(max_length=60, blank=True, default="#", verbose_name='Страна')
 
+    def __str__(self):
+        return self.name[0:300]
 
 
 
