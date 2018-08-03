@@ -1,0 +1,168 @@
+
+
+.elementor-row {
+	display: block;
+	float: left;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.elementor-row {
+	display: block;
+	float: left;
+	text-align: center;
+	vertical-align: top;
+	height: 100%;
+	width: 100%;
+}
+
+
+.elementor-element {
+	display: inline-block;
+	width: 100%;
+
+	height: 100%;
+}
+
+.elementor-container {
+	display: block;
+	float: left;
+	width: 100%;
+	text-align: center;
+	vertical-align: middle;
+}
+
+
+.block_contacts  {
+	display: block;
+	float: left;
+	height: 50rem;
+	width: 48%;
+	margin: 1%;
+	border: thin solid silver;
+	padding: 1rem;	
+}
+
+.elementor-element-2d2c508 {
+	padding: 0;
+	height: 50rem;
+}
+
+.title-contacts {
+	background-color: #02122d;
+
+    transition: background .3s , border-radius .3s , opacity .3s;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 50rem;
+	background-image: url(../img/contacts_title.jpg);	
+    -moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: 100%; /* Современные браузеры */
+	background-attachment: fixed;
+}
+
+.elementor-widget-container {
+	display: block;
+	float: left;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.elementor-widget-container h2 {
+	display: inline-block;
+    vertical-align: middle;
+	margin-top: 20%;
+	font-size: 5rem;
+	color: #FFF;
+	width: 50%;
+	font-weight: bold;
+	
+	
+}
+
+.highlited  {
+	font-weight: bold;
+	color: #A84020;
+}
+
+.elementor-icon {
+	width: 5rem;
+	font-size: 5rem;
+}
+
+.g_map_block {
+	height: 30rem;
+}
+
+.g_map_block iframe {
+	height: 100%;
+	width: 90%;
+}
+.contact-form {
+	background: aliceblue;
+}
+
+.contact-form h2 {
+	color: gray;
+	font-weight: normal;
+	display: block;
+	float: left;
+	width: 100%;
+	font-size: 3rem;
+	margin: 0;
+	background: aliceblue;
+	
+}
+
+.form_field-block {
+	display: block;
+	float: left;
+	width: 100%;
+	background: aliceblue;
+	padding: 1rem;
+}
+
+.elementor-element-f4c7623 {
+	margin-top: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

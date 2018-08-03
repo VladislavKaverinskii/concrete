@@ -182,6 +182,7 @@ class GalleryExtended(models.Model):
     # This is the important bit - where we add in the tags.
     tags = TaggableManager(blank=True)
     logo = models.ImageField(blank=True, upload_to='img/media/%Y/%m/%d', help_text='150x300px', verbose_name='Иллюстрация')
+    is_main_galery = models.BooleanField(default=False, verbose_name='Главная галерея сайта')
 
     # Boilerplate code to make a prettier display in the admin interface.
     class Meta:
@@ -205,9 +206,78 @@ class Partner(models.Model):
         return self.name[0:300]
 
 
+class Phone(models.Model):
+    class Meta:
+        db_table = "PHONE"
+    
+    number = models.CharField(max_length=15, blank=True, verbose_name='Номер телефона')  
+
+    def __str__(self):
+        return self.number[0:300]
 
 
+class Contact(models.Model):
+    class Meta:
+        db_table = "CONTACT"
+    department = models.CharField(max_length=200, blank=True, verbose_name='Отдел')
+    phone = models.ManyToManyField(Phone, verbose_name='Номер телефона', related_name='+')
+    contact_person = models.CharField(max_length=200, blank=True, verbose_name='Котнактное лицо')
+    email = models.CharField(max_length=200, blank=True, verbose_name='email')
 
+    def __str__(self):
+        return self.department[0:300]		
+		
+
+class Proposal(models.Model):
+    class Meta:
+        db_table = "PROPOSAL"
+    name = models.CharField(max_length=100, blank=True, verbose_name='Имя')
+    email = models.CharField(max_length=100, blank=True, verbose_name='Email')
+    text = models.TextField(blank=True, verbose_name='Текст')
+
+    def __str__(self):
+        return self.name[0:300]			
+
+
+class CandidateRequirement(models.Model):
+    class Meta:
+        db_table = "REQUIRMENT"
+    description = models.CharField(max_length=500, blank=True, verbose_name='Описание требования')
+
+    def __str__(self):
+        return self.description[0:300]
+
+
+class WorkingCondition(models.Model):
+    class Meta:
+        db_table = "WORKINGCONDITION"
+    description = models.CharField(max_length=500, blank=True, verbose_name='Описание условия работы')
+
+    def __str__(self):
+        return self.description[0:300]
+		
+
+class Vacation(models.Model):
+    class Meta:
+        db_table = "VACATION"
+    name = models.CharField(max_length=300, blank=True, verbose_name='Название вакансии')
+    description = HTMLField(blank=True, verbose_name='Описание вакансии')
+    requirements = models.ManyToManyField(CandidateRequirement, verbose_name='Требования', related_name='+')
+    conditions = models.ManyToManyField(WorkingCondition, verbose_name='Условия работы', related_name='+')
+    salary = models.CharField(max_length=40, blank=True, verbose_name='Зарплата')
+    phones = models.CharField(max_length=100, blank=True, verbose_name='Контактный телефон')
+    illustration = models.ImageField(blank=True, upload_to='img/media/%Y/%m/%d', help_text='150x300px', verbose_name='Иллюстрация')
+
+    def __str__(self):
+        return self.name[0:300]			
+				
+		
+		
+		
+		
+		
+		
+		
 
 
 

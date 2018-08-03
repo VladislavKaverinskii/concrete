@@ -1,0 +1,194 @@
+{% extends 'base.html' %}
+
+{% load tinymce_tags %}
+{% load static %}
+	{% block content %}
+	
+    <article id=post-18 class="post-18 page type-page status-publish hentry">
+        <header class=entry-header>
+            <h1 class=entry-title>Контакты</h1>
+        </header><!-- .entry-header -->
+        <div class=entry-content>
+            <div class="elementor elementor-18">
+                <div class=elementor-inner>
+                    <div class=elementor-section-wrap>
+                        <section data-id=2d2c508 class="elementor-element elementor-element-2d2c508 elementor-section-height-min-height elementor-section-boxed elementor-section-height-default elementor-section-items-middle elementor-section elementor-top-section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}" data-element_type=section>
+                            <div class="elementor-background-overlay"></div>
+                            <div class="elementor-container elementor-column-gap-default">
+                                <div class=elementor-row>
+                                    <div data-id=292ba178 class="elementor-element elementor-element-292ba178 elementor-column elementor-col-100 elementor-top-column" data-element_type=column>
+                                        <div class="elementor-column-wrap elementor-element-populated">
+                                            <div class="title-contacts elementor-widget-wrap">
+                                                <div data-id=1e696b75 class="elementor-element elementor-element-1e696b75 elementor-widget elementor-widget-heading" data-element_type=heading.default>
+                                                    <div class="elementor-widget-container">
+                                                        <h2 class="elementor-heading-title elementor-size-large">СВЯЖИТЕСЬ С НАМИ</h2>
+                                                    </div>
+                                                </div>
+                                                <div data-id=4df08d08 class="elementor-element elementor-element-4df08d08 elementor-widget elementor-widget-divider" data-element_type=divider.default>
+                                                    <div class=elementor-widget-container>
+                                                        <div class=elementor-divider>
+                                                            <span class=elementor-divider-separator></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div data-id=3538c754 class="elementor-element elementor-element-3538c754 elementor-widget elementor-widget-text-editor" data-element_type=text-editor.default>
+                                                    <div class=elementor-widget-container>
+                                                        <div class="elementor-text-editor elementor-clearfix"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section data-id=29519403 class="elementor-element elementor-element-29519403 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-element_type=section>
+                            <div class="elementor-container elementor-column-gap-default">
+                                <div class="elementor-row">
+                                    <div data-id=6b886548 class="block_contacts elementor-element elementor-element-6b886548 elementor-column elementor-col-50 elementor-top-column" data-element_type=column>
+                                        <div class="elementor-column-wrap elementor-element-populated">
+                                            <div class="elementor-widget-wrap">
+                                                <div data-id=56f125cd class="elementor-element elementor-element-56f125cd elementor-view-default elementor-position-top elementor-vertical-align-top elementor-widget elementor-widget-icon-box" data-element_type=icon-box.default>
+                                                    <div class=elementor-widget-container>
+                                                        <div class=elementor-icon-box-wrapper>
+                                                            <div class=elementor-icon-box-icon>
+                                                                <span class="highlited elementor-icon elementor-animation-">
+                                                                    <i class="fa fa-phone" aria-hidden=true></i>
+                                                                </span>
+                                                            </div>
+                                                            <div class=elementor-icon-box-content>
+                                                                <h3 class=elementor-icon-box-title>
+                                                                    <span>Позвоните нам</span>
+                                                                </h3>
+                                                                <p class=elementor-icon-box-description>Вы можете связатся с нашими менеджерами за номерами:</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+												{% for contact in contacts %}
+													<div data-id=c70ca44 class="elementor-element elementor-element-c70ca44 elementor-vertical-align-top elementor-widget elementor-widget-icon-box" data-element_type=icon-box.default>
+                                                    <div class=elementor-widget-container>
+                                                        <div class=elementor-icon-box-wrapper>
+                                                            <div class=elementor-icon-box-content>
+                                                                <h3 class=elementor-icon-box-title>
+                                                                    <span></span>
+                                                                </h3>
+																{% if contact.department %}
+																	<p class="elementor-icon-box-description">{{ contact.department }}:</p>
+																{% endif %}
+                                                            </div>
+                                                        </div>
+                                                    </div>
+													</div>
+													<div data-id=023805c class="elementor-element elementor-element-023805c elementor-widget elementor-widget-heading" data-element_type=heading.default>
+														<div class=elementor-widget-container>
+														    {% if contact.contact_person %}
+																<p class="elementor-heading-title elementor-size-large">{{ contact.contact_person }}: </p>
+															{% endif %}
+															{% for phone in contact.phone.all %}
+																{% if phone.number %}
+																	<p class="highlited elementor-heading-title elementor-size-large">{{ phone.number }}</p>
+																{% endif %}
+															{% endfor %}
+															<br>
+														</div>
+													</div>
+												{% endfor %}
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-id=3d743379 class="block_contacts  elementor-element elementor-element-3d743379 elementor-column elementor-col-50 elementor-top-column" data-element_type=column>
+                                        <div class="elementor-column-wrap elementor-element-populated">
+                                            <div class=elementor-widget-wrap>
+                                                <div data-id=4e87be7e class="elementor-element elementor-element-4e87be7e elementor-view-default elementor-position-top elementor-vertical-align-top elementor-widget elementor-widget-icon-box" data-element_type=icon-box.default>
+                                                    <div class=elementor-widget-container>
+                                                        <div class=elementor-icon-box-wrapper>
+                                                            <div class=elementor-icon-box-icon>
+                                                                <span class="highlited elementor-icon elementor-animation-">
+                                                                    <i class="fa fa-envelope-o" aria-hidden=true></i>
+                                                                </span>
+                                                            </div>
+                                                            <div class=elementor-icon-box-content>
+                                                                <h3 class=elementor-icon-box-title>
+                                                                    <span>Напишите нам</span>
+                                                                </h3>
+                                                                <p class=elementor-icon-box-description>Напишите нам на електронный адрес:
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+												{% for contact in contacts %}
+													<div data-id=6788d585 class="elementor-element elementor-element-6788d585 elementor-widget elementor-widget-heading" data-element_type=heading.default>
+														<div class=elementor-widget-container>
+															{% if contact.department %}
+																<p class=elementor-icon-box-description>{{ contact.department }}:</p>
+															{% endif %}
+															{% if contact.email %}
+																<p class="highlited elementor-heading-title elementor-size-large">{{ contact.email }}</p>
+															{% endif %}
+														</div>
+													</div>
+												{% endfor %}
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section data-id=31b88827 class="elementor-element elementor-element-31b88827 elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-element_type=section>
+                            <div class="elementor-container elementor-column-gap-no">
+                                <div class=elementor-row>
+                                    <div data-id=49f3a183 class="elementor-element elementor-element-49f3a183 elementor-column elementor-col-100 elementor-top-column" data-element_type=column>
+                                        <div class="elementor-column-wrap elementor-element-populated">
+                                            <div class=elementor-widget-wrap>
+                                                <div data-id=5bf9e4f8 class="elementor-element elementor-element-5bf9e4f8 elementor-widget elementor-widget-google_maps" data-element_type=google_maps.default>
+                                                    <div class=elementor-widget-container>
+                                                        <div class="g_map_block elementor-custom-embed">
+															<iframe frameborder=0 scrolling=no marginheight=0 marginwidth=0 src="https://maps.google.com/maps?q=%D0%9A%D0%B0%D0%BB%D0%B8%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0%20%D0%BB%D0%B5%D1%81%D0%BD%D0%B0%D1%8F%2056&amp;t=m&amp;z=12&amp;output=embed&amp;iwloc=near" aria-label="Калиновка лесная 56"></iframe>
+														</div>
+                                                    </div>
+                                                </div>
+                                                <div data-id=f4c7623 class="elementor-element elementor-element-f4c7623 elementor-widget elementor-widget-html" data-element_type=html.default>
+                                                    <div class=elementor-widget-container>
+                                                        <form class="contact-form" action="/proposal" method=post style="text-align:center; background: aliceblue; ">
+															{% csrf_token %}
+                                                            <h2 class="contact-form_title" style="text-align:center;">Оставтье вашу заявку</h2>															
+														
+															<div class="form_field-block">
+																<div>
+																	<p>Напишите ваше имя</p>
+																	<input type="text" name="name" size="15" maxlength="30" required placeholder="">
+																</div>
+																<div>
+																	<p>Напишите ваш email</p>
+																	<input type="text" name="email" size="15" maxlength="25" required placeholder="">
+																</div>
+																<div>
+																	<p>Напишите ваш заявку/информацию</p>
+																    <textarea rows="5" cols="30" name="feedback" required placeholder=""></textarea>
+																</div>
+																<button>отправить</button>
+															</div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div><!-- .entry-content -->
+        <footer class=entry-footer>
+        </footer><!-- .entry-footer -->
+    </article><!-- #post-## -->
+{% endblock %}
+
+
+

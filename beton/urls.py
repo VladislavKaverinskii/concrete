@@ -14,7 +14,10 @@ urlpatterns = [
 	#path('galery', views.get_galery, name='galery'),
 	path('galery', views.GalleryListView.as_view(),  name='gallery-list'),
 	path('partners', views.get_partners, name='partners'),
-	
+    path('main_galery', views.MainGalleryListView.as_view(), name='MainGallery'),
+	path('contacts', views.get_contacts, name='contacts'),
+	path('proposal', views.handle_proposal, name='proposal'),
+	path('vacations', views.get_vacations, name='vacations'),
 ]
 
 from photologue.sitemaps import GallerySitemap, PhotoSitemap

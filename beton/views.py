@@ -9,8 +9,11 @@ from django.contrib.auth.forms import UserCreationForm
 	
 import json
 from datetime import datetime
+import smtplib
+from email.mime.text import MIMEText
 
-from .models import MainPageBlock, Service, Deleivery, DeleiveryPoint, MaterialPrice, PricePage, GalleryExtended, Gallery, Partner
+from .models import MainPageBlock, Service, Deleivery, DeleiveryPoint, MaterialPrice
+from .models import PricePage, GalleryExtended, Gallery, Partner, Contact, Proposal, Vacation, CandidateRequirement, WorkingCondition
 
 def index(request):
     page_blocks = MainPageBlock.objects.all().order_by("order")
@@ -180,12 +183,64 @@ def get_partners(request):
     return render(request, "partners.html", {"partners": partners})
 
 
+class MainGalleryListView(ListView):
+    tmp = GalleryExtended.objects.filter(is_main_galery=False)
+    queryset = Gallery.objects.on_site().is_public()
+
+    for i in tmp:
+        queryset = queryset.exclude(id=i.id)           
+ 
+    paginate_by = 20
 
 
+def get_contacts(request):
+    contacts = Contact.objects.all()
+    
+    return render(request, "contacts.html", {"contacts": contacts})
 
 
+def handle_proposal(request):
+    if request.POST:
+        form = request.POST
+        proposal = Proposal()
+        proposal.name = form['name']
+        proposal.email = form['email']
+        proposal.text = form['feedback']
+        if proposal.name.strip() != "":
+            proposal.save()
+
+            me = 'ismail_beton@i.ua'
+            you = 'hisie@ukr.net'
+            smtp_server = 'smtp.i.ua'
+            msg = MIMEText(proposal.text)
+            msg['Subject'] = 'Новая заявка'
+            msg['From'] = me
+            msg['To'] = you
+            s = smtplib.SMTP(smtp_server)
+            #s.connect()
+            s.sendmail(me, [you], msg.as_string())
+            s.quit()
+    contacts = Contact.objects.all()
+        #message.save()
+    return render(request, "contacts.html", {"contacts": contacts})
 
 
-
+def get_vacations(request):
+    vacations = Vacation.objects.all()
+    date_value = datetime.now()
+    return render(request, "vacations.html", {"vacations": vacations, "date_value": date_value})
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	

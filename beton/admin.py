@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 from .models import MainPageBlock, Service, Deleivery, DeleiveryImage, DeleiveryPoint, MaterialType, MaterialPrice, PricePage, Photo, Partner
-
+from .models import Contact, Phone, Proposal, Vacation, CandidateRequirement, WorkingCondition
 
 admin.site.register(MainPageBlock)
 admin.site.register(Service)
@@ -12,6 +12,12 @@ admin.site.register(MaterialType)
 admin.site.register(MaterialPrice)
 admin.site.register(PricePage)
 admin.site.register(Partner)
+admin.site.register(Contact)
+admin.site.register(Phone)
+admin.site.register(Proposal)
+admin.site.register(Vacation)
+admin.site.register(CandidateRequirement)
+admin.site.register(WorkingCondition)
 
 class DeleiveryInline(admin.TabularInline):
     model = Deleivery
@@ -20,6 +26,8 @@ class DeleiveryImageAdmin(admin.ModelAdmin):
     inlines = [
         DeleiveryInline,
     ]
+	
+
 	
 # Класс для админки с отображением миниатюры в листе изображений (get_mini_html)
 # и возможностью физического, пакетного удаления 
@@ -40,6 +48,9 @@ from photologue.admin import GalleryAdmin as GalleryAdminDefault
 from photologue.models import Gallery
 from .models import GalleryExtended
 
+admin.site.unregister(Gallery)
+
+
 
 class GalleryExtendedInline(admin.StackedInline):
     model = GalleryExtended
@@ -52,13 +63,9 @@ class GalleryAdmin(GalleryAdminDefault):
 
     inlines = [GalleryExtendedInline, ]
 
-admin.site.unregister(Gallery)
+
+
 admin.site.register(Gallery, GalleryAdmin)
-
-
-
-
-
 
 
 
