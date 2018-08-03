@@ -174,7 +174,13 @@ def get_galery(request):
 from django.views.generic.list import ListView
 
 class GalleryListView(ListView):
+    tmp = GalleryExtended.objects.filter(is_main_galery=True)
     queryset = Gallery.objects.on_site().is_public()
+
+    for i in tmp:
+        queryset = queryset.exclude(id=i.id)
+		
+    #queryset = Gallery.objects.on_site().is_public()
     paginate_by = 30
 
 
