@@ -9,8 +9,7 @@
         </header><!-- .entry-header -->
         <div class=entry-content>
             <h3 style="text-align: center;">Вакансии на {{ date_value|date:"d E Y" }}</h3>
-			
-          
+
 			{% for vacation in vacations %}
 				<p>
 					<a href='static/media/{{ MEDIA_URL }}{{ vacation.illustration }}'>

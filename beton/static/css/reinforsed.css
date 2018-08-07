@@ -1,0 +1,15 @@
+h4 {
+	/*text-align: center;*/
+}
+
+.reinforsed__title {
+	display: block;
+	float: left;
+	width: 100%;
+	
+}
+
+h4 a {
+	display: inline-block;
+    float: right;
+}

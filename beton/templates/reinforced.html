@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% load tinymce_tags %}
+{% load static %}
+	{% block content %}
+	<link  rel='stylesheet' href="{% static 'css/reinforsed.css' %}" type='text/css' />
+	<link rel='stylesheet' href="{% static 'css/price_list.css' %}" />
+	<script type='text/javascript' src="{% static 'js/reinforsed_price_list.js' %}"></script>
+	
+    <article id=post-2306 class="post-2306 page type-page status-publish hentry">
+        <header class=entry-header>
+            <h1 class=entry-title>ЖБИ</h1>
+        </header><!-- .entry-header -->
+        <div class=entry-content>
+            <h4 style="text-align: center;">
+				<img data-attachment-id=2005 data-permalink="{% static 'img/блоки-e1507729275184.jpg' %}" data-orig-file="http://www.profibeton.com.ua/wp-content/uploads/блоки-e1507729275184.jpg" data-orig-size="550,344" data-comments-opened=0 data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="-блоки-e1507729275184" data-image-description="" data-medium-file="http://www.profibeton.com.ua/wp-content/uploads/блоки-e1507729275184-300x188.jpg" data-large-file="http://www.profibeton.com.ua/wp-content/uploads/блоки-e1507729275184.jpg" class="wp-image-2005 alignleft" title="Блоки фундаментные" src="http://www.profibeton.com.ua/wp-content/uploads/блоки-e1507729275184.jpg" alt="Блоки фундаментные" width=400 height=250 srcset="http://www.profibeton.com.ua/wp-content/uploads/блоки-e1507729275184.jpg 550w, http://www.profibeton.com.ua/wp-content/uploads/блоки-e1507729275184-300x188.jpg 300w, http://www.profibeton.com.ua/wp-content/uploads/блоки-e1507729275184-480x300.jpg 480w" sizes="(max-width: 400px) 100vw, 400px" />
+			</h4>
+            <h1>ООО «Профибетон» Производство и Доставка ФБС в Бровары, Нежин, Прилуки, Борисполь, Броварской и Бориспольский р-н, Киев — Левый берег</h1>
+            
+			{% for block in main_block  %}
+			
+				<h4 class="reinforsed__title" style="text-align: center;"><strong>{{ block.type }}</strong></h4>
+				<p>
+					{{ block.description|safe }}
+				</p>
+				<h4>
+					<a href="static/media/{{ MEDIA_URL }}{{ block.illustration }}">
+						<img data-attachment-id=2221 data-permalink="static/media/{{ MEDIA_URL }}{{ block.illustration }}"
+						data-orig-file="static/media/{{ MEDIA_URL }}{{ block.illustration }}" data-orig-size="4000,3000" data-comments-opened=0
+						data-image-title=IMG_2937 data-image-description=""
+						data-medium-file="static/media/{{ MEDIA_URL }}{{ block.illustration }}"
+						data-large-file="static/media/{{ MEDIA_URL }}{{ block.illustration }}"
+						class="alignright wp-image-2221" title="фбс бровары"
+						data-pagespeed-lazy-src="static/media/{{ MEDIA_URL }}{{ block.illustration }}"
+						alt="фбс" width=457 height=343 
+						data-pagespeed-lazy-srcset="static/media/{{ MEDIA_URL }}{{ block.illustration }} 4000w, static/media/{{ MEDIA_URL }}{{ block.illustration }} 300w, static/media/{{ MEDIA_URL }}{{ block.illustration }} 768w, static/media/{{ MEDIA_URL }}{{ block.illustration }} 1024w" 
+						sizes="(max-width: 457px) 100vw, 457px" data-pagespeed-url-hash=3379275072
+						src="static/media/{{ MEDIA_URL }}{{ block.illustration }}"
+						/>
+					</a>
+				</h4>
+				{{ block.extra_description|safe }}
+				
+				<div class="{{ block.js_class }}">																
+			</div>
+			{% endfor %}
+            
+                <div class="addtoany_share_save_container addtoany_content addtoany_content_bottom">
+                    <div class=addtoany_header>Поделиться:</div>
+                    <div class="a2a_kit a2a_kit_size_32 addtoany_list" data-a2a-url="http://www.profibeton.com.ua/%d0%b6%d0%b1%d0%b8/" data-a2a-title="ЖБИ"><a class=a2a_button_facebook href="https://www.addtoany.com/add_to/facebook?linkurl=http%3A%2F%2Fwww.profibeton.com.ua%2F%25d0%25b6%25d0%25b1%25d0%25b8%2F&amp;linkname=%D0%96%D0%91%D0%98" title=Facebook rel="nofollow noopener" target=_blank></a><a class=a2a_button_google_plus href="https://www.addtoany.com/add_to/google_plus?linkurl=http%3A%2F%2Fwww.profibeton.com.ua%2F%25d0%25b6%25d0%25b1%25d0%25b8%2F&amp;linkname=%D0%96%D0%91%D0%98" title="Google+" rel="nofollow noopener" target=_blank></a><a class=a2a_button_twitter href="https://www.addtoany.com/add_to/twitter?linkurl=http%3A%2F%2Fwww.profibeton.com.ua%2F%25d0%25b6%25d0%25b1%25d0%25b8%2F&amp;linkname=%D0%96%D0%91%D0%98" title=Twitter rel="nofollow noopener" target=_blank></a></div>
+                </div>
+        </div><!-- .entry-content -->
+        <footer class=entry-footer>
+        </footer><!-- .entry-footer -->
+    </article><!-- #post-## -->
+{% endblock %}

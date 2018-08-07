@@ -271,9 +271,87 @@ class Vacation(models.Model):
     def __str__(self):
         return self.name[0:300]			
 				
+
+class MainConcreteMixes(models.Model):
+    class Meta:
+        db_table = "MAINCONCRETEMIXES"
+    title = models.CharField(max_length=300, blank=True, verbose_name='Название')
+    description = HTMLField(blank=True, verbose_name='Основной текст')
+    illustration = models.ImageField(blank=True, upload_to='img/media/%Y/%m/%d', help_text='150x300px', verbose_name='Иллюстрация')
+
+    def __str__(self):
+        return self.title[0:300]
 		
 		
-		
+class MainCementMixes(models.Model):
+    class Meta:
+        db_table = "MAINCEMENTMIXES"
+    title = models.CharField(max_length=300, blank=True, verbose_name='Название')
+    description = HTMLField(blank=True, verbose_name='Основной текст')
+    illustration = models.ImageField(blank=True, upload_to='img/media/%Y/%m/%d', help_text='150x300px', verbose_name='Иллюстрация')
+
+    def __str__(self):
+        return self.title[0:300]
+
+
+class SandSail(models.Model):
+    class Meta:
+        db_table = "SANDSAIL"
+    title = models.CharField(max_length=300, blank=True, verbose_name='Название')
+    title_list = HTMLField(blank=True, verbose_name='Основной текст')
+    description = HTMLField(blank=True, verbose_name='Основной текст')
+    title_illustration = models.ImageField(blank=True, upload_to='img/media/%Y/%m/%d', help_text='150x300px', verbose_name='Верхняя иллюстрация')
+    main_illustration = models.ImageField(blank=True, upload_to='img/media/%Y/%m/%d', help_text='150x300px', verbose_name='Нижняя иллюстрация')
+
+    def __str__(self):
+        return self.title[0:300]
+
+
+class CrushedStone(models.Model):
+    class Meta:
+        db_table = "CRUSHEDSTONE"
+    description = HTMLField(blank=True, verbose_name='Текст')
+    illustration = models.ImageField(blank=True, upload_to='img/media/%Y/%m/%d', help_text='150x300px', verbose_name='Иллюстрация')
+
+    def __str__(self):
+        return self.description[0:10]
+
+
+class Reinforced(models.Model):
+    class Meta:
+        db_table = "REINFORCED"
+    type = models.CharField(max_length=200, blank=True, verbose_name='Название')
+    description = HTMLField(blank=True, verbose_name='Текст')
+    extra_description = HTMLField(blank=True, verbose_name='Дополнительный текст')
+    illustration = models.ImageField(blank=True, upload_to='img/media/%Y/%m/%d', help_text='150x300px', verbose_name='Иллюстрация')
+    js_class = models.CharField(max_length=50, blank=True, verbose_name='Класс для JS')
+
+    def __str__(self):
+        return self.type[0:200]
+
+
+
+class ReinforcedPrice(models.Model):
+    class Meta:
+        db_table = "REINFORCEDPRICE"
+    type = models.ForeignKey(Reinforced, verbose_name='Тип', on_delete=models.CASCADE, related_name='+')
+    name = models.CharField(max_length=200, blank=True, verbose_name='Название')
+    volume = models.CharField(max_length=200, blank=True, verbose_name='Объём 1шт м/3')
+    price = models.CharField(max_length=30, blank=True, verbose_name='Цена 1шт з ПДВ, грн')
+
+    def __str__(self):
+        return self.name[0:200]
+
+
+
+
+
+
+
+
+
+
+
 		
 		
 		

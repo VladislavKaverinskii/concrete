@@ -1,0 +1,58 @@
+﻿{% extends 'base.html' %}
+
+{% load tinymce_tags %}
+{% load static %}
+	{% block content %}
+    <article id=post-31 class="post-31 page type-page status-publish hentry">
+		{% for block in main_block %}
+			<header class=entry-header>
+				<h1 class=entry-title>{{ block.title }}</h1>
+			</header><!-- .entry-header -->
+			<div class=entry-content>
+				<p>
+					<a href="static/media/{{ MEDIA_URL }}{{ block.title_illustration }}">
+						<img data-attachment-id=699 data-permalink="static/media/{{ MEDIA_URL }} {{ block.title_illustration }}" 
+						data-orig-file="static/media/{{ MEDIA_URL }}{{ block.title_illustration }}" data-orig-size="600,326"
+						data-comments-opened=0 data-image-title=pesok data-image-description=""
+						data-medium-file="static/media/{{ MEDIA_URL }}{{ block.title_illustration }}"
+						data-large-file="static/media/{{ MEDIA_URL }}{{ block.title_illustration }}"
+						class="alignleft wp-image-699 " style="margin-right: 30px;" title="Купить песок"
+						src="static/media/{{ MEDIA_URL }}{{ block.title_illustration }}"
+						alt="Купить песок" width=493 height=268 srcset="static/media/{{ MEDIA_URL }}{{ block.title_illustration }} 600w, static/media/{{ MEDIA_URL }}{{ block.title_illustration }} 300w"
+						sizes="(max-width: 493px) 100vw, 493px" data-pagespeed-url-hash=2777838524 />
+					</a>
+				</p>
+				<ul>
+					<li style="list-style-type: none;">
+						{{ block.title_list|safe }}
+					</li>
+				</ul>
+				<hr/>
+				
+				<p>
+					{{ block.description|safe }}
+					<a href="static/media/{{ MEDIA_URL }}{{ block.main_illustration }}">
+						<img data-attachment-id=1978 data-permalink="static/media/{{ MEDIA_URL }}{{ block.main_illustration }}"
+							data-orig-file="static/media/{{ MEDIA_URL }}{{ block.main_illustration }}" data-orig-size="537,398"
+							data-comments-opened=0 data-image-title=sasval data-image-description="" 
+							data-medium-file="static/media/{{ MEDIA_URL }}{{ block.main_illustration }}"
+							data-large-file="static/media/{{ MEDIA_URL }}{{ block.main_illustration }}"
+							class=" wp-image-1978 alignright"
+							data-pagespeed-lazy-src="static/media/{{ MEDIA_URL }}{{ block.main_illustration }}" 
+							alt="" width=337 height=250 data-pagespeed-lazy-srcset="static/media/{{ MEDIA_URL }}{{ block.main_illustration }} 537w, static/media/{{ MEDIA_URL }}{{ block.main_illustration }} 300w"
+							sizes="(max-width: 337px) 100vw, 337px" data-pagespeed-url-hash=3862009469
+							src="static/media/{{ MEDIA_URL }}{{ block.main_illustration }}"
+						/>
+					</a>
+				</p>
+				
+			</div><!-- .entry-content -->
+		{% endfor %}
+		<div class="addtoany_share_save_container addtoany_content addtoany_content_bottom">
+			<div class=addtoany_header>Поделиться:</div>
+			<div class="a2a_kit a2a_kit_size_32 addtoany_list" data-a2a-url="http://www.profibeton.com.ua/%d1%83%d1%81%d0%bb%d1%83%d0%b3%d0%b8/%d0%bf%d1%80%d0%be%d0%b4%d0%b0%d0%b6%d0%b0-%d0%bf%d0%b5%d1%81%d0%ba%d0%b0/" data-a2a-title="Продажа песка"><a class=a2a_button_facebook href="https://www.addtoany.com/add_to/facebook?linkurl=http%3A%2F%2Fwww.profibeton.com.ua%2F%25d1%2583%25d1%2581%25d0%25bb%25d1%2583%25d0%25b3%25d0%25b8%2F%25d0%25bf%25d1%2580%25d0%25be%25d0%25b4%25d0%25b0%25d0%25b6%25d0%25b0-%25d0%25bf%25d0%25b5%25d1%2581%25d0%25ba%25d0%25b0%2F&amp;linkname=%D0%9F%D1%80%D0%BE%D0%B4%D0%B0%D0%B6%D0%B0%20%D0%BF%D0%B5%D1%81%D0%BA%D0%B0" title=Facebook rel="nofollow noopener" target=_blank></a><a class=a2a_button_google_plus href="https://www.addtoany.com/add_to/google_plus?linkurl=http%3A%2F%2Fwww.profibeton.com.ua%2F%25d1%2583%25d1%2581%25d0%25bb%25d1%2583%25d0%25b3%25d0%25b8%2F%25d0%25bf%25d1%2580%25d0%25be%25d0%25b4%25d0%25b0%25d0%25b6%25d0%25b0-%25d0%25bf%25d0%25b5%25d1%2581%25d0%25ba%25d0%25b0%2F&amp;linkname=%D0%9F%D1%80%D0%BE%D0%B4%D0%B0%D0%B6%D0%B0%20%D0%BF%D0%B5%D1%81%D0%BA%D0%B0" title="Google+" rel="nofollow noopener" target=_blank></a><a class=a2a_button_twitter href="https://www.addtoany.com/add_to/twitter?linkurl=http%3A%2F%2Fwww.profibeton.com.ua%2F%25d1%2583%25d1%2581%25d0%25bb%25d1%2583%25d0%25b3%25d0%25b8%2F%25d0%25bf%25d1%2580%25d0%25be%25d0%25b4%25d0%25b0%25d0%25b6%25d0%25b0-%25d0%25bf%25d0%25b5%25d1%2581%25d0%25ba%25d0%25b0%2F&amp;linkname=%D0%9F%D1%80%D0%BE%D0%B4%D0%B0%D0%B6%D0%B0%20%D0%BF%D0%B5%D1%81%D0%BA%D0%B0" title=Twitter rel="nofollow noopener" target=_blank></a></div>
+		</div>
+        <footer class=entry-footer>
+        </footer><!-- .entry-footer -->
+    </article><!-- #post-## -->
+{% endblock %}

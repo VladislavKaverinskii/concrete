@@ -6,14 +6,18 @@ $(document).ready(function() {
 		
 	$.ajax({
 		url: "/get_price_list",
-		type: "get",
+		type: "get",		
 		success: function(data) {
 			//var menuTemplate = $('#price_table_item_tmpl').template(data).appendTo(".price_table");
 			price_table = "";
+			url_local = location.href.split("/")[location.href.split("/").length - 1];
 			for (i in data) {
-				//console.log(i);
-				
-				for (j in data[i]) {
+
+				if (((url_local=="concrete_mixes")&&(i=="Раствор цементный"))|| 
+					((url_local=="cement_mixes")&&(i=="Бетон")))
+						continue;
+				for (j in data[i]) {					
+
 					price_table += "<table class='price_table'>"
 					//console.log(i + " " + j);
 					price_table += "<tr><td class='head_price' colspan=2>" + i + " " + j + "</td><tr>";

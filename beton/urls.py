@@ -18,6 +18,13 @@ urlpatterns = [
 	path('contacts', views.get_contacts, name='contacts'),
 	path('proposal', views.handle_proposal, name='proposal'),
 	path('vacations', views.get_vacations, name='vacations'),
+	path('concrete_mixes', views.concrete_mixes, name='concrete_mixes'),
+	path('cement_mixes', views.cement_mixes, name='cement_mixes'),
+	path('sand', views.sand_sail, name='sand'),
+	path('crushed_stone', views.crushed_stone, name='crushed_stone'),
+	path('reinforced', views.reinforced, name='reinforced'),
+	path('get_reinforced_price_list', views.get_reinforced_price_list, name='get_reinforced_price_list'),
+	
 ]
 
 from photologue.sitemaps import GallerySitemap, PhotoSitemap

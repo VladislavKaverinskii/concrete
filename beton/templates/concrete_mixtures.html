@@ -1,0 +1,75 @@
+﻿{% extends 'base.html' %}
+
+{% load tinymce_tags %}
+{% load static %}
+	{% block content %}
+	<link rel='stylesheet' href="{% static 'css/price_list.css' %}" />
+    <article id=post-29 class="post-29 page type-page status-publish hentry">
+        <header class=entry-header>
+            <h1 class=entry-title>{{ title }}</h1>
+        </header><!-- .entry-header -->
+        <div class=entry-content>
+			{% for block in main_block %}
+				<p align="center">
+					<a href="static/media/{{ MEDIA_URL }}{{ block.illustration }}">
+						<img data-attachment-id=685 data-permalink="" data-orig-file="static/media/{{ MEDIA_URL }}{{ block.illustration }}"
+						data-orig-size="750,396" data-comments-opened=0 data-image-title=beton_1b data-image-description=""
+						data-medium-file="static/media/{{ MEDIA_URL }}{{ block.illustration }}"
+						data-large-file="static/media/{{ MEDIA_URL }}{{ block.illustration }}"
+						class="wp-image-685 alignleft" src="static/media/{{ MEDIA_URL }}{{ block.illustration }}"
+						alt="Бетон купить" width=441 height=233 srcset="static/media/{{ MEDIA_URL }}{{ block.illustration }} 750w, static/media/{{ MEDIA_URL }}{{ block.illustration }} 300w"
+						sizes="(max-width: 441px) 100vw, 441px" />
+					</a>
+					{{ block.description|safe }}
+				</p>
+			{% endfor %}
+            <p style="text-align: left;">
+                <div class="supsystic-table-loader spinner" style="background-color: #000000"></div>
+                
+                   <div id=supsystic-table-8_28941 class="supsystic-tables-wrap " style=" width: 100%; ">
+						<table id=supsystic-table-8 class="supsystic-table border lightboxImg cell-border " data-id=8 data-view-id=8_28941 data-title="цены на бетон" data-currency-format="$1,000.00" data-percent-format="10.00%" data-date-format=DD.MM.YYYY data-time-format=HH:mm data-features="[&quot;after_table_loaded_script&quot;]" data-lightbox-img="" data-head-rows-count=1 data-pagination-length="50,100,All" data-auto-index=off data-searching-settings="{&quot;minChars&quot;:&quot;0&quot;}" data-lang=default data-override="{&quot;emptyTable&quot;:&quot;&quot;,&quot;info&quot;:&quot;&quot;,&quot;infoEmpty&quot;:&quot;&quot;,&quot;infoFiltered&quot;:&quot;&quot;,&quot;lengthMenu&quot;:&quot;&quot;,&quot;search&quot;:&quot;&quot;,&quot;zeroRecords&quot;:&quot;&quot;,&quot;exportLabel&quot;:&quot;&quot;,&quot;file&quot;:&quot;default&quot;}" data-merged="[{&quot;row&quot;:0,&quot;col&quot;:0,&quot;rowspan&quot;:1,&quot;colspan&quot;:2},{&quot;row&quot;:1,&quot;col&quot;:0,&quot;rowspan&quot;:1,&quot;colspan&quot;:2},{&quot;row&quot;:5,&quot;col&quot;:0,&quot;rowspan&quot;:1,&quot;colspan&quot;:2},{&quot;row&quot;:6,&quot;col&quot;:0,&quot;rowspan&quot;:1,&quot;colspan&quot;:2},{&quot;row&quot;:7,&quot;col&quot;:0,&quot;rowspan&quot;:1,&quot;colspan&quot;:2},{&quot;row&quot;:11,&quot;col&quot;:0,&quot;rowspan&quot;:1,&quot;colspan&quot;:2},{&quot;row&quot;:12,&quot;col&quot;:0,&quot;rowspan&quot;:1,&quot;colspan&quot;:2},{&quot;row&quot;:13,&quot;col&quot;:0,&quot;rowspan&quot;:1,&quot;colspan&quot;:2},{&quot;row&quot;:17,&quot;col&quot;:0,&quot;rowspan&quot;:1,&quot;colspan&quot;:2},{&quot;row&quot;:18,&quot;col&quot;:0,&quot;rowspan&quot;:1,&quot;colspan&quot;:2},{&quot;row&quot;:19,&quot;col&quot;:0,&quot;rowspan&quot;:1,&quot;colspan&quot;:2},{&quot;row&quot;:23,&quot;col&quot;:0,&quot;rowspan&quot;:1,&quot;colspan&quot;:2},{&quot;row&quot;:24,&quot;col&quot;:0,&quot;rowspan&quot;:1,&quot;colspan&quot;:2},{&quot;row&quot;:25,&quot;col&quot;:0,&quot;rowspan&quot;:1,&quot;colspan&quot;:2},{&quot;row&quot;:29,&quot;col&quot;:0,&quot;rowspan&quot;:1,&quot;colspan&quot;:2},{&quot;row&quot;:30,&quot;col&quot;:0,&quot;rowspan&quot;:1,&quot;colspan&quot;:2},{&quot;row&quot;:31,&quot;col&quot;:0,&quot;rowspan&quot;:1,&quot;colspan&quot;:2},{&quot;row&quot;:36,&quot;col&quot;:0,&quot;rowspan&quot;:1,&quot;colspan&quot;:2},{&quot;row&quot;:41,&quot;col&quot;:0,&quot;rowspan&quot;:1,&quot;colspan&quot;:2},{&quot;row&quot;:42,&quot;col&quot;:0,&quot;rowspan&quot;:1,&quot;colspan&quot;:2}]" data-responsive-mode=0 data-from-history=0>
+							<thead>
+								<tr>
+									<th style="width:53.2951%; padding: 0 !important;"></th>
+									<th style="width:46.7049%; padding: 0 !important;"></th>
+								</tr>
+							</thead>
+							<tbody>
+								
+								<tr>
+									<td data-cell-id=A1 data-x=0 data-y=1 class="fsize-24 bold bg-f2f6f7 htCenter"
+									data-cell-type=text data-original-value="Марка бетона" data-order="Марка бетона"
+									style="min-width: 53.2951%; width: 53.2951%;" data-colspan=2 data-rowspan=1>
+										
+										
+									</td>
+									<td data-cell-id=B1 data-x=1 data-y=1 class="fsize-24 bold bg-f2f6f7 htCenter"
+									data-cell-type=text data-original-value="" data-order=""
+									style="min-width: 46.7049%; width: 46.7049%;" data-hide=true>
+									</td>
+								</tr>
+								
+							</tbody>
+						</table><!-- /#supsystic-table-8.supsystic-table -->
+						<div id="price_table">
+						
+						</div>
+				</div><!-- /.supsystic-tables-wrap --> 
+     
+                <!-- Tables Generator by Supsystic -->
+                <!-- Version: 1.8.6 -->
+                <!-- http://supsystic.com/ -->
+                <div class="addtoany_share_save_container addtoany_content addtoany_content_bottom">
+                    <div class=addtoany_header>Поделиться:</div>
+                    <div class="a2a_kit a2a_kit_size_32 addtoany_list" data-a2a-url="#" data-a2a-title="Бетонные смеси">
+						<a class=a2a_button_facebook href="#" title=Facebook rel="nofollow noopener" target=_blank></a>
+						<a class=a2a_button_google_plus href="#" title="Google+" rel="nofollow noopener" target=_blank></a>
+						<a class=a2a_button_twitter href="#" title=Twitter rel="nofollow noopener" target=_blank></a>
+					</div>
+                </div>
+        </div><!-- .entry-content -->
+        <footer class=entry-footer>
+        </footer><!-- .entry-footer -->
+    </article><!-- #post-## -->
+	<script data-cfasync=false type='text/javascript' src="{% static 'js/price_list.js' %}"></script>
+{% endblock %}

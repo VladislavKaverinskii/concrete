@@ -1,7 +1,7 @@
 from django.contrib import admin
 
-from .models import MainPageBlock, Service, Deleivery, DeleiveryImage, DeleiveryPoint, MaterialType, MaterialPrice, PricePage, Photo, Partner
-from .models import Contact, Phone, Proposal, Vacation, CandidateRequirement, WorkingCondition
+from .models import MainPageBlock, Service, Deleivery, DeleiveryImage, DeleiveryPoint, MaterialType, MaterialPrice, PricePage, Photo, Partner, Reinforced, ReinforcedPrice
+from .models import Contact, Phone, Proposal, Vacation, CandidateRequirement, WorkingCondition, MainConcreteMixes, MainCementMixes, SandSail, CrushedStone
 
 admin.site.register(MainPageBlock)
 admin.site.register(Service)
@@ -18,6 +18,12 @@ admin.site.register(Proposal)
 admin.site.register(Vacation)
 admin.site.register(CandidateRequirement)
 admin.site.register(WorkingCondition)
+admin.site.register(MainConcreteMixes)
+admin.site.register(MainCementMixes)
+admin.site.register(SandSail)
+admin.site.register(CrushedStone)
+admin.site.register(ReinforcedPrice)
+admin.site.register(Reinforced)
 
 class DeleiveryInline(admin.TabularInline):
     model = Deleivery

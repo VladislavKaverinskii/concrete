@@ -12,8 +12,8 @@ from datetime import datetime
 import smtplib
 from email.mime.text import MIMEText
 
-from .models import MainPageBlock, Service, Deleivery, DeleiveryPoint, MaterialPrice
-from .models import PricePage, GalleryExtended, Gallery, Partner, Contact, Proposal, Vacation, CandidateRequirement, WorkingCondition
+from .models import MainPageBlock, Service, Deleivery, DeleiveryPoint, MaterialPrice, MainConcreteMixes, MainCementMixes, SandSail, CrushedStone, ReinforcedPrice
+from .models import PricePage, GalleryExtended, Gallery, Partner, Contact, Proposal, Vacation, CandidateRequirement, WorkingCondition, Reinforced
 
 def index(request):
     page_blocks = MainPageBlock.objects.all().order_by("order")
@@ -235,6 +235,82 @@ def get_vacations(request):
     vacations = Vacation.objects.all()
     date_value = datetime.now()
     return render(request, "vacations.html", {"vacations": vacations, "date_value": date_value})
+	
+	
+def concrete_mixes(request):
+    main_concrete_mixes_block = MainConcreteMixes.objects.all()
+    title = main_concrete_mixes_block[0].title;
+    return render(request, "concrete_mixtures.html", {"title": title, "main_block": main_concrete_mixes_block})
+	
+	
+def cement_mixes(request):
+    main_cemente_mixes_block = MainCementMixes.objects.all()
+    title = main_cemente_mixes_block[0].title;
+    return render(request, "concrete_mixtures.html", {"title": title, "main_block": main_cemente_mixes_block})	
+	
+	
+def sand_sail(request):
+    sand = SandSail.objects.all()
+    return render(request, "sand.html", {"main_block": sand})		
+	
+	
+def crushed_stone(request):
+    crushed_stone = CrushedStone.objects.all()
+    return render(request, "crushed_stone.html", {"main_block": crushed_stone})
+	
+	
+def reinforced(request):
+    reinforced = Reinforced.objects.all()
+    #form_reinforced_price_list()
+    return render(request, "reinforced.html", {"main_block": reinforced})	
+	
+	
+
+def form_reinforced_price_list():
+    data = ReinforcedPrice.objects.all().order_by("type")
+    tmp_data = {}	
+
+    for i in data:
+        if str(i.type.type) not in tmp_data:
+            tmp_data[str(i.type.type)] = [{"name": i.name, "volume": i.volume, "price": i.price, "js_class": str(i.type.js_class)}]
+        else:
+            tmp_data[str(i.type.type)].append({"name": i.name, "volume": i.volume, "price": i.price})
+    print(tmp_data)
+    return (tmp_data)
+
+
+def get_reinforced_price_list(request):
+    return HttpResponse(json.dumps(form_reinforced_price_list()), content_type='application/json')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
 	
 	
 	
